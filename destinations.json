@@ -18,11 +18,7 @@
       "total": 93
     },
     "estimatedCost": "$55K–70K",
-    "weather": {
-      "temperature_range": "75–85°F",
-      "conditions": "Sunny with brief tropical showers",
-      "notes": "North Shore gets slightly more rain than South Shore. June–July is dry season. Warm and comfortable."
-    },
+    "weather": "75–85°F, Sunny with brief tropical showers",
     "flightTime": "~5h 30m",
     "flights": {
       "outbound": {
