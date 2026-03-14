@@ -670,7 +670,7 @@
             <div class="card-body">
               <div class="card-name">${d.name}</div>
               <div class="card-tagline">${d.tagline || ''}</div>
-              <div class="card-tags">${regionTags[d.id] ? `<span class="card-tag" style="background:var(--ocean-light);color:var(--ocean-dark)">${regionLabels[regionTags[d.id]] || regionTags[d.id]}</span>` : ''}${tags.map(t => `<span class="card-tag">${actLabels[t] || t}</span>`).join('')}</div>
+              <div class="card-tags">${(function(){ const r = regionTags[d.id]; return r ? '<span class="card-tag" style="background:var(--ocean-light);color:var(--ocean-dark)">' + (regionLabels[r] || r) + '</span>' : ''; })()}${tags.map(t => '<span class="card-tag">' + (actLabels[t] || t) + '</span>').join('')}</div>
               <div class="card-stats">
                 <div class="stat"><span class="stat-icon">✈️</span><span class="stat-value">${d.flightTime || ''}</span></div>
                 <div class="stat"><span class="stat-icon">🌡️</span><span class="stat-value">${d.weather ? d.weather.split(',')[0] : ''}</span></div>
@@ -735,7 +735,7 @@
               <div class="hotel-rooms">
                 ${(d.hotel.rooms || []).map(r => `<div class="room-row"><div class="room-info"><div class="room-name">${r.name || ''}</div><div class="room-for">${r.for || ''}</div></div><span class="room-rate">${r.rate || ''}</span></div>`).join('')}
               </div>
-              ${d.hotel.highlights?.length ? `<div class="hotel-highlights">${d.hotel.highlights.map(h => `<span class="highlight-tag">${h}</span>`).join('')}</div>` : ''}
+              ${d.hotel.highlights?.length ? '<div class="hotel-highlights">' + d.hotel.highlights.map(h => '<span class="highlight-tag">' + h + '</span>').join('') + '</div>' : ''}
             </div>
           ` : ''}
 
@@ -753,9 +753,9 @@
                   ${(day.schedule || []).map(s => {
                     const isNap = s.activity && s.activity.toLowerCase().includes('nap');
                     const actText = s.url
-                      ? `<a href="${s.url}" target="_blank" rel="noopener" style="color:var(--ocean-dark);text-decoration:underline;text-decoration-color:var(--ocean-light)">${s.activity || ''}</a> <span style="font-size:0.7rem;color:var(--ocean)">↗</span>`
+                      ? '<a href="' + s.url + '" target="_blank" rel="noopener" style="color:var(--ocean-dark);text-decoration:underline;text-decoration-color:var(--ocean-light)">' + (s.activity || '') + '</a> <span style="font-size:0.7rem;color:var(--ocean)">↗</span>'
                       : (s.activity || '');
-                    return `<div class="schedule-item${isNap ? ' is-nap' : ''}"><span class="sched-time">${s.time || ''}</span><span class="sched-icon">${s.icon || '📍'}</span><div class="sched-body"><div class="sched-activity">${actText}</div>${s.who ? `<span class="sched-who">${s.who}</span>` : ''}</div></div>`;
+                    return '<div class="schedule-item' + (isNap ? ' is-nap' : '') + '"><span class="sched-time">' + (s.time || '') + '</span><span class="sched-icon">' + (s.icon || '📍') + '</span><div class="sched-body"><div class="sched-activity">' + actText + '</div>' + (s.who ? '<span class="sched-who">' + s.who + '</span>' : '') + '</div></div>';
                   }).join('')}
                 </div>
               </div>
