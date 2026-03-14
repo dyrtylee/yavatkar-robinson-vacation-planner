@@ -1,5 +1,557 @@
 [
   {
+    "id": "kauai-hawaii",
+    "name": "Kauai, Hawaii — The Garden Isle",
+    "tier": "S",
+    "tagline": "",
+    "heroEmoji": "🌍",
+    "scores": {
+      "wildlife": 8,
+      "kidMagic": 9,
+      "food": 8,
+      "travelEase": 10,
+      "weatherFit": 9,
+      "toddlerSafe": 10,
+      "grandparent": 10,
+      "luxury": 9,
+      "safety": 10,
+      "total": 93
+    },
+    "estimatedCost": "$55K–70K",
+    "weather": {
+      "temperature_range": "75–85°F",
+      "conditions": "Sunny with brief tropical showers",
+      "notes": "North Shore gets slightly more rain than South Shore. June–July is dry season. Warm and comfortable."
+    },
+    "flightTime": "~5h 30m",
+    "flights": {
+      "outbound": {
+        "airline": "Hawaiian Airlines",
+        "route": "LAX → LIH",
+        "class": "First Class",
+        "duration": "5h 30m",
+        "depart": "8:30 AM PDT",
+        "arrive": "12:00 PM HST"
+      },
+      "return": {
+        "airline": "Hawaiian Airlines",
+        "route": "LIH → LAX",
+        "class": "First Class",
+        "duration": "5h 25m",
+        "depart": "2:00 PM HST",
+        "arrive": "10:25 PM PDT"
+      }
+    },
+    "hotel": {
+      "name": "1 Hotel Hanalei Bay",
+      "url": "https://www.1hotels.com/hanalei-bay",
+      "rooms": [
+        {
+          "name": "Oceanfront Suite",
+          "for": "2 adults + 1yo (crib)",
+          "rate": "$2,200/night"
+        },
+        {
+          "name": "Ocean View King Room",
+          "for": "2 grandparents",
+          "rate": "$1,400/night"
+        },
+        {
+          "name": "Garden View Double Room",
+          "for": "5yo + 2.5yo (with grandparent or parent rotation)",
+          "rate": "$1,100/night"
+        }
+      ],
+      "highlights": []
+    },
+    "days": [
+      {
+        "day": 1,
+        "title": "Travel Day — Arrival",
+        "schedule": [
+          {
+            "time": "5:30 AM",
+            "activity": "Depart for LAX",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "Flight HA75 departs LAX",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "12:00 PM HST",
+            "activity": "Arrive Lihue Airport (LIH)",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "12:45 PM",
+            "activity": "Lunch: Kalapaki Joe's",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "1:30 PM",
+            "activity": "Drive to 1 Hotel Hanalei Bay (~45 min)",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "2:15 PM",
+            "activity": "Check in at 1 Hotel Hanalei Bay",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "2:30 PM – 4:00 PM",
+            "activity": "NAP TIME / Pool Exploration",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Sunset walk along Hanalei Bay beach",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner: 1 Hotel restaurant (on-site)",
+            "who": "All",
+            "icon": "📍"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "North Shore Beach Day — Hanalei & Anini",
+        "schedule": [
+          {
+            "time": "7:30 AM",
+            "activity": "Breakfast at 1 Hotel",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Hanalei Bay beach morning",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "10:30 AM",
+            "activity": "Snorkeling at Anini Beach",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch: Hanalei Bread Company",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "1:00 PM – 3:00 PM",
+            "activity": "NAP TIME",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Pool time at the resort",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "5:30 PM",
+            "activity": "Shave ice run: Wishing Well Shave Ice or JoJo's Shave Ice",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner: Postcards Cafe",
+            "who": "All",
+            "icon": "📍"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Na Pali Coast Boat Tour",
+        "schedule": [
+          {
+            "time": "7:00 AM",
+            "activity": "Early breakfast (in-room or grab-and-go)",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "8:00 AM",
+            "activity": "Na Pali Coast Catamaran Tour",
+            "who": "All",
+            "icon": "📍",
+            "url": "https://www.napali.com/"
+          },
+          {
+            "time": "1:00 PM – 3:00 PM",
+            "activity": "NAP TIME",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Gentle pool time or beach walk",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Spouting Horn Blowhole (if energy permits — or move to another day)",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner: The Beach House",
+            "who": "All",
+            "icon": "📍"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Waimea Canyon — Grand Canyon of the Pacific",
+        "schedule": [
+          {
+            "time": "7:30 AM",
+            "activity": "Breakfast at 1 Hotel",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "Drive to Waimea Canyon (~1.5 hrs from North Shore)",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "Waimea Canyon Lookout + easy family hikes",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "11:30 AM",
+            "activity": "Kalalau Lookout (Pu'u o Kila Lookout)",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "12:30 PM",
+            "activity": "Lunch: Waimea Brewing Company or picnic packed from hotel",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "1:00 PM – 3:00 PM",
+            "activity": "NAP TIME (drive back to North Shore)",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Pool time at resort",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner: Kalypso",
+            "who": "All",
+            "icon": "📍"
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Chill Day — Resort & Allerton Garden",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Slow breakfast at 1 Hotel",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Resort pool and beach time",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at resort",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "1:00 PM – 3:00 PM",
+            "activity": "NAP TIME",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Allerton Garden Tour (National Tropical Botanical Garden)",
+            "who": "All",
+            "icon": "📍",
+            "url": "https://ntbg.org/gardens/allerton/"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner: Tidepools at Grand Hyatt Kauai",
+            "who": "All",
+            "icon": "📍"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Wailua River Kayak & Kilauea Lighthouse",
+        "schedule": [
+          {
+            "time": "7:30 AM",
+            "activity": "Breakfast at 1 Hotel",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Kayak the Wailua River to Secret Falls",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch: Oasis on the Beach",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "1:00 PM – 3:00 PM",
+            "activity": "NAP TIME",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Kilauea Lighthouse & National Wildlife Refuge",
+            "who": "All",
+            "icon": "📍",
+            "url": "https://www.fws.gov/refuge/kilauea-point"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Shave ice at JoJo's Shave Ice",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner: Merriman's Fish House",
+            "who": "All",
+            "icon": "📍"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Poipu Beach & Backcountry Tubing",
+        "schedule": [
+          {
+            "time": "7:30 AM",
+            "activity": "Breakfast at 1 Hotel",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "Drive to Poipu Beach (~1 hr from North Shore)",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Poipu Beach",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch: Brennecke's Beach Broiler",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "1:00 PM – 2:30 PM",
+            "activity": "NAP TIME (toddlers nap in car or stroller; flexible timing)",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "2:30 PM",
+            "activity": "Kauai Backcountry Adventures — Mountain Tubing",
+            "who": "All",
+            "icon": "📍",
+            "url": "https://kauaibackcountry.com/"
+          },
+          {
+            "time": "5:30 PM",
+            "activity": "Drive back to North Shore",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "7:00 PM",
+            "activity": "Dinner: Kalypso (casual, late arrival okay)",
+            "who": "All",
+            "icon": "📍"
+          }
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Fourth of July — Luau & Celebration",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Slow breakfast at 1 Hotel",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Beach time at Hanalei Bay (last full beach day)",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Helicopter tour of Na Pali Coast (optional for adults)",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch: Hanalei Bread Company or resort",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "1:00 PM – 3:00 PM",
+            "activity": "NAP TIME",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Pool time and final resort exploration",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Smith's Tropical Paradise Luau",
+            "who": "All",
+            "icon": "📍",
+            "url": "https://www.smithskauai.com/luau/"
+          },
+          {
+            "time": "8:30 PM",
+            "activity": "Fourth of July fireworks (if visible from area)",
+            "who": "All",
+            "icon": "📍"
+          }
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Travel Day — Departure",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Final breakfast at 1 Hotel",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Last beach walk or pool dip",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "10:30 AM",
+            "activity": "Check out of 1 Hotel Hanalei Bay",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "10:45 AM",
+            "activity": "Drive to LIH airport (~45 min)",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "11:45 AM",
+            "activity": "Lunch at LIH airport or grab plate lunch at Hamura Saimin in Lihue on the way",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "2:00 PM HST",
+            "activity": "Flight HA76 departs LIH",
+            "who": "All",
+            "icon": "📍"
+          },
+          {
+            "time": "10:25 PM PDT",
+            "activity": "Arrive LAX",
+            "who": "All",
+            "icon": "📍"
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Kauai is the most lush and least developed major Hawaiian island — expect a slower, more natural experience.",
+      "The drive from the North Shore (Hanalei) to the South Shore (Poipu) takes about 1 hour. Plan accordingly for South Shore activities.",
+      "Na Pali Coast is only accessible by boat, helicopter, or an 11-mile hike (Kalalau Trail). The boat tour is the best option for families.",
+      "Choose a catamaran over a zodiac for the Na Pali tour — smoother ride for kids and the grandparent who is afraid of turbulence/rough motion.",
+      "Poipu Beach is one of the best toddler beaches in Hawaii — protected cove, lifeguards, monk seals, and tide pools.",
+      "Kauai Backcountry tubing has a minimum age of 5 and minimum weight of 43 lbs — confirm the 5yo qualifies before booking.",
+      "Pack reef-safe sunscreen (required by Hawaii law) and reapply frequently.",
+      "1 Hotel Hanalei Bay reopened in 2023 after extensive renovation — it's Kauai's newest luxury option.",
+      "The Allerton Garden Jurassic Park connection will thrill the 5yo — show them the movie scene before the trip.",
+      "Bring a lightweight stroller for resort paths and a baby carrier for excursions and beaches.",
+      "Kilauea Lighthouse closes early — check hours and plan to arrive by mid-afternoon at the latest.",
+      "Consider a portable sound machine for nap times in the hotel room.",
+      "Hanalei Bay in summer has generally calm water, but always check conditions — winter brings big surf."
+    ],
+    "costBreakdown": {
+      "flights": "$16,500 (First class roundtrip LAX-LIH x6 purchased seats + 1 lap infant (free domestic))",
+      "hotel": "$37,600 (3 rooms x 8 nights at 1 Hotel Hanalei Bay)",
+      "activities": "$3,800 (Na Pali boat tour ($200/pp x4 adults + $120/child, ~$920), Allerton Garden ($60/pp x4 adults, ~$240), Kauai Backcountry tubing ($140/pp x3, ~$420), kayak trip ($100/pp x3, ~$300), helicopter tour ($350/pp x2, ~$700), luau ($150/adult x4 + $80/child, ~$680), Kilauea Lighthouse ($10/pp, ~$40), misc)",
+      "food": "$3,600 (Approx $350–450/day for 7 people at resort and local restaurants x 9 days)",
+      "transfers": "",
+      "total": "$55K–70K"
+    }
+  },
+  {
     "id": "channel-islands-ojai",
     "name": "Channel Islands & Ojai, California",
     "tier": "A",
