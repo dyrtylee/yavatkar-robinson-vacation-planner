@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Vacation Planner 2026</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    :root {
+      --ocean: #0077B6;
+      --ocean-light: #90E0EF;
+      --ocean-dark: #023E8A;
+      --sand: #FEFAE0;
+      --sand-dark: #DDA15E;
+      --coral: #FF6B6B;
+      --green: #52B788;
+      --green-dark: #2D6A4F;
+      --purple: #7B68EE;
+      --text: #1a1a2e;
+      --text-light: #555;
+      --bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --shadow: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      background: linear-gradient(135deg, var(--ocean-dark) 0%, var(--ocean) 50%, var(--ocean-light) 100%);
+      color: white;
+      padding: 40px 24px 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0; right: 0;
+      height: 40px;
+      background: var(--bg);
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+    .header h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.5px; }
+    .header .subtitle { font-size: 1.1rem; opacity: 0.9; font-weight: 400; }
+    .header .family-icons { font-size: 2rem; margin-top: 12px; letter-spacing: 4px; }
+    .help-btn {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      border: 2px solid rgba(255,255,255,0.5);
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+    }
+    .help-btn:hover { background: rgba(255,255,255,0.4); transform: scale(1.1); }
+
+    /* ===== FILTERS BAR ===== */
+    .filters-bar {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 100;
+      border-bottom: 1px solid #e9ecef;
+      padding: 14px 24px 10px;
+    }
+    .filters-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .filters-row:last-child { margin-bottom: 0; }
+    .filter-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 8px 0 4px;
+      display: flex;
+      align-items: center;
+      margin-right: 4px;
+      white-space: nowrap;
+    }
+    .filter-btn {
+      padding: 7px 16px;
+      border: 2px solid #dee2e6;
+      border-radius: 50px;
+      background: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .filter-btn:hover { border-color: var(--ocean); color: var(--ocean); }
+    .filter-btn.active { background: var(--ocean); color: white; border-color: var(--ocean); }
+    .act-btn {
+      padding: 6px 14px;
+      border: 2px solid #e9ecef;
+      border-radius: 50px;
+      background: white;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .act-btn:hover { border-color: var(--sand-dark); color: var(--sand-dark); }
+    .act-btn.active { background: var(--sand-dark); color: white; border-color: var(--sand-dark); }
+    .sort-select {
+      padding: 7px 14px;
+      border: 2px solid #dee2e6;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      background: white;
+      cursor: pointer;
+    }
+
+    /* ===== GRID ===== */
+    .grid-container { max-width: 1400px; margin: 0 auto; padding: 20px 24px 40px; }
+    .results-count { text-align: center; color: var(--text-light); margin-bottom: 16px; font-size: 0.95rem; }
+    .dest-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
+
+    /* ===== CARD ===== */
+    .dest-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .dest-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+    .card-tier {
+      position: absolute; top: 12px; right: 12px;
+      padding: 4px 12px; border-radius: 20px;
+      font-size: 0.8rem; font-weight: 700; color: white; z-index: 2;
+    }
+    .tier-S { background: linear-gradient(135deg, #FFD700, #FFA500); }
+    .tier-A { background: linear-gradient(135deg, var(--ocean), var(--ocean-dark)); }
+    .tier-B { background: linear-gradient(135deg, var(--purple), #5B4FCF); }
+    .tier-C { background: linear-gradient(135deg, #6c757d, #495057); }
+    .tier-PH { background: linear-gradient(135deg, var(--green), var(--green-dark)); }
+
+    .card-hero { height: 80px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+    .card-hero.beach { background: linear-gradient(135deg, #00B4D8, #48CAE4); }
+    .card-hero.mountain { background: linear-gradient(135deg, #52B788, #95D5B2); }
+    .card-hero.island { background: linear-gradient(135deg, #0096C7, #90E0EF); }
+    .card-hero.safari { background: linear-gradient(135deg, #DDA15E, #FEFAE0); }
+    .card-hero.europe { background: linear-gradient(135deg, #7B68EE, #B8B8FF); }
+    .card-hero.arctic { background: linear-gradient(135deg, #ADE8F4, #CAF0F8); }
+    .card-hero.tropical { background: linear-gradient(135deg, #FF6B6B, #FFB4A2); }
+
+    .card-body { padding: 16px 20px 20px; }
+    .card-name { font-size: 1.25rem; font-weight: 700; margin-bottom: 2px; }
+    .card-tagline { font-size: 0.9rem; color: var(--text-light); margin-bottom: 10px; }
+    .card-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 10px; }
+    .card-tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; background: #e9ecef; color: var(--text-light); font-weight: 600; }
+    .card-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+    .stat { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; }
+    .stat-icon { font-size: 1rem; }
+    .stat-value { font-weight: 600; }
+    .card-scores { display: flex; gap: 4px; margin-bottom: 12px; }
+    .score-bar { flex: 1; height: 6px; border-radius: 3px; background: #e9ecef; position: relative; overflow: hidden; }
+    .score-fill { position: absolute; top: 0; left: 0; height: 100%; border-radius: 3px; transition: width 0.6s ease; }
+    .card-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 12px; border-top: 1px solid #f0f0f0; }
+    .card-cost { font-size: 1.1rem; font-weight: 700; color: var(--ocean-dark); }
+    .card-score-total { background: var(--ocean); color: white; padding: 4px 14px; border-radius: 20px; font-weight: 700; font-size: 0.95rem; }
+
+    /* ===== MODAL ===== */
+    .modal-overlay {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      z-index: 1000; overflow-y: auto; padding: 24px;
+    }
+    .modal-overlay.open { display: block; }
+    .modal {
+      background: white; border-radius: var(--radius); max-width: 820px; width: 100%;
+      margin: 24px auto; position: relative; animation: slideUp 0.3s ease;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+    @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .modal-close {
+      position: fixed; top: 32px; right: max(calc(50% - 420px), 32px);
+      background: white; color: var(--text); border: none; width: 48px; height: 48px;
+      border-radius: 50%; font-size: 1.5rem; cursor: pointer; z-index: 1010;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.15s;
+    }
+    .modal-close:hover { transform: scale(1.1); }
+
+    .modal-hero { height: 100px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; border-radius: var(--radius) var(--radius) 0 0; }
+    .modal-content { padding: 28px 36px 40px; }
+    .modal-title { font-size: 1.8rem; font-weight: 800; margin-bottom: 4px; line-height: 1.2; }
+    .modal-tagline { font-size: 1rem; color: var(--text-light); margin-bottom: 24px; line-height: 1.5; }
+
+    .quick-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 28px; }
+    .quick-stat { background: var(--bg); padding: 14px 16px; border-radius: var(--radius-sm); text-align: center; }
+    .quick-stat .qs-icon { font-size: 1.4rem; display: block; margin-bottom: 4px; }
+    .quick-stat .qs-label { color: var(--text-light); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; display: block; }
+    .quick-stat .qs-value { font-weight: 700; font-size: 1rem; display: block; margin-top: 2px; }
+
+    .scorecard { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 32px; }
+    .score-item { text-align: center; padding: 12px 8px; background: var(--bg); border-radius: var(--radius-sm); }
+    .score-item .score-emoji { font-size: 1.3rem; }
+    .score-item .score-name { font-size: 0.7rem; color: var(--text-light); display: block; margin: 3px 0; text-transform: uppercase; letter-spacing: 0.3px; }
+    .score-item .score-val { font-weight: 800; font-size: 1.1rem; color: var(--ocean-dark); }
+
+    .section-title { font-size: 1.3rem; font-weight: 700; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--ocean-light); display: flex; align-items: center; gap: 8px; }
+    .section-title:first-of-type { margin-top: 0; }
+
+    .flight-card { background: var(--bg); border-radius: var(--radius-sm); padding: 16px 20px; margin-bottom: 10px; border-left: 4px solid var(--ocean); }
+    .flight-route { font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; }
+    .flight-detail { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+
+    .hotel-card { background: var(--bg); border-radius: var(--radius-sm); padding: 20px 24px; margin-bottom: 16px; }
+    .hotel-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; }
+    .hotel-rooms { display: flex; flex-direction: column; gap: 8px; }
+    .room-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: white; border-radius: 8px; gap: 12px; }
+    .room-info { flex: 1; min-width: 0; }
+    .room-name { font-weight: 600; font-size: 0.95rem; }
+    .room-for { font-size: 0.8rem; color: var(--text-light); margin-top: 2px; }
+    .room-rate { font-weight: 700; color: var(--ocean-dark); white-space: nowrap; font-size: 0.95rem; }
+    .hotel-highlights { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+    .highlight-tag { background: white; padding: 5px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; color: var(--ocean); border: 1px solid var(--ocean-light); }
+
+    .day-block { margin-bottom: 8px; background: var(--bg); border-radius: var(--radius-sm); overflow: hidden; }
+    .day-header { font-size: 1.05rem; font-weight: 700; color: white; background: var(--ocean); padding: 10px 18px; display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; }
+    .day-header:hover { background: var(--ocean-dark); }
+    .day-header .day-num { background: rgba(255,255,255,0.25); padding: 2px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 700; }
+    .day-header .day-toggle { margin-left: auto; font-size: 1.2rem; transition: transform 0.2s; }
+    .day-header .day-toggle.collapsed { transform: rotate(-90deg); }
+    .day-schedule { padding: 6px 0; }
+    .day-schedule.collapsed { display: none; }
+    .schedule-item { display: grid; grid-template-columns: 100px 36px 1fr; gap: 8px; align-items: start; padding: 10px 18px; border-bottom: 1px solid #e9ecef; transition: background 0.15s; }
+    .schedule-item:last-child { border-bottom: none; }
+    .schedule-item:hover { background: rgba(0,119,182,0.04); }
+    .schedule-item.is-nap { background: #FFF8E1; border-bottom-color: #FFE082; }
+    .schedule-item.is-nap:hover { background: #FFF3CD; }
+    .sched-time { font-size: 0.85rem; font-weight: 700; color: var(--ocean-dark); padding-top: 1px; white-space: nowrap; }
+    .sched-icon { font-size: 1.2rem; text-align: center; }
+    .sched-body { min-width: 0; }
+    .sched-activity { font-weight: 600; font-size: 0.92rem; line-height: 1.4; color: var(--text); }
+    .sched-who { font-size: 0.78rem; color: var(--text-light); margin-top: 3px; display: inline-block; background: #e9ecef; padding: 1px 8px; border-radius: 4px; }
+
+    .cost-table { width: 100%; border-collapse: collapse; margin-top: 8px; background: var(--bg); border-radius: var(--radius-sm); overflow: hidden; }
+    .cost-table td { padding: 12px 16px; border-bottom: 1px solid #e0e0e0; }
+    .cost-table td:first-child { font-weight: 500; }
+    .cost-table td:last-child { text-align: right; font-weight: 600; font-size: 0.92rem; }
+    .cost-table tr:last-child td { border-bottom: none; font-size: 1.1rem; font-weight: 700; color: var(--ocean-dark); border-top: 2px solid var(--ocean); background: white; }
+
+    .tips-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .tips-list li { padding: 12px 16px; background: #E8F5E9; border-radius: 8px; font-size: 0.9rem; line-height: 1.5; border-left: 4px solid var(--green); }
+    .tips-list li::before { content: '💡 '; }
+
+    /* ===== WALKTHROUGH ===== */
+    .wt-overlay {
+      display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.65); z-index: 2000;
+      justify-content: center; align-items: center;
+    }
+    .wt-overlay.open { display: flex; }
+    .wt-tooltip {
+      background: white; border-radius: 20px;
+      padding: 28px 32px; max-width: 480px; width: calc(100vw - 40px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      z-index: 2010;
+      animation: fadeIn 0.3s ease;
+      position: relative;
+      max-height: calc(100vh - 60px);
+      overflow-y: auto;
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+    .wt-tooltip h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; }
+    .wt-tooltip p { font-size: 0.95rem; color: var(--text-light); line-height: 1.7; margin-bottom: 20px; }
+    .wt-tooltip .wt-actions { display: flex; justify-content: space-between; align-items: center; }
+    .wt-step-label { font-size: 0.8rem; color: var(--text-light); font-weight: 600; }
+    .wt-dots { display: flex; gap: 6px; margin-top: 6px; }
+    .wt-dot { width: 8px; height: 8px; border-radius: 50%; background: #dee2e6; transition: all 0.2s; }
+    .wt-dot.active { background: var(--ocean); width: 24px; border-radius: 4px; }
+    .wt-btns { display: flex; gap: 10px; align-items: center; }
+    .wt-next, .wt-done, .wt-prev {
+      padding: 10px 24px; border: none; border-radius: 50px;
+      font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.2s;
+    }
+    .wt-prev { background: #e9ecef; color: var(--text); }
+    .wt-prev:hover { background: #dee2e6; }
+    .wt-next { background: var(--ocean); color: white; }
+    .wt-next:hover { background: var(--ocean-dark); }
+    .wt-done { background: var(--green); color: white; }
+    .wt-done:hover { background: var(--green-dark); }
+    .wt-skip { background: none; border: none; color: var(--text-light); font-size: 0.85rem; cursor: pointer; text-decoration: underline; margin-top: 6px; }
+    .wt-highlight-img { font-size: 3rem; text-align: center; margin-bottom: 12px; display: block; }
+
+    /* ===== MAP ===== */
+    .map-toggle-bar {
+      display: flex; justify-content: center; padding: 0 24px; margin-bottom: -4px;
+    }
+    .view-btns { display: flex; gap: 0; border-radius: 10px; overflow: hidden; border: 2px solid #dee2e6; }
+    .view-btn {
+      padding: 8px 20px; border: none; background: white; font-size: 0.9rem;
+      font-weight: 600; cursor: pointer; transition: all 0.2s;
+    }
+    .view-btn.active { background: var(--ocean); color: white; }
+    .view-btn:not(.active):hover { background: #e9ecef; }
+    #mapContainer {
+      display: none; width: 100%; height: 500px; border-radius: var(--radius);
+      overflow: hidden; box-shadow: var(--shadow); margin-bottom: 20px;
+    }
+    #mapContainer.show { display: block; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .header h1 { font-size: 1.8rem; }
+      .dest-grid { grid-template-columns: 1fr; }
+      .modal-overlay { padding: 8px; }
+      .modal { margin: 8px auto; }
+      .modal-content { padding: 16px 16px 24px; }
+      .modal-title { font-size: 1.4rem; }
+      .modal-close { top: 16px; right: 16px; }
+      .quick-stats { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .scorecard { grid-template-columns: repeat(3, 1fr); }
+      .schedule-item { grid-template-columns: 80px 28px 1fr; padding: 8px 12px; }
+      .sched-time { font-size: 0.8rem; }
+      .sched-activity { font-size: 0.85rem; }
+      .filters-bar { padding: 10px 12px 8px; }
+      .filter-btn, .act-btn { padding: 6px 12px; font-size: 0.8rem; }
+    }
+
+    .loading { text-align: center; padding: 60px 20px; color: var(--text-light); }
+    .loading .spinner { display: inline-block; width: 40px; height: 40px; border: 4px solid #e9ecef; border-top-color: var(--ocean); border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 16px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .back-top { position: fixed; bottom: 24px; right: 24px; background: var(--ocean); color: white; width: 48px; height: 48px; border-radius: 50%; border: none; font-size: 1.4rem; cursor: pointer; box-shadow: var(--shadow); display: none; align-items: center; justify-content: center; z-index: 500; }
+    .back-top.show { display: flex; }
+
+    .no-results { text-align: center; padding: 60px 20px; }
+    .no-results h3 { font-size: 1.3rem; margin-bottom: 8px; }
+    .no-results p { color: var(--text-light); }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1>Family Vacation Planner</h1>
+    <p class="subtitle">June 27 – July 5, 2026 &nbsp;·&nbsp; From Los Angeles</p>
+    <div class="family-icons">👴👵 👨👩 👦👶🍼</div>
+    <button class="help-btn" onclick="startWalkthrough()" title="How to use this planner">?</button>
+  </header>
+
+  <nav class="filters-bar" id="filtersBar">
+    <div class="filters-row" id="tierFilters">
+      <span class="filter-label">Tier:</span>
+      <button class="filter-btn active" data-filter="all">All (56)</button>
+      <button class="filter-btn" data-filter="S">⭐ S-Tier</button>
+      <button class="filter-btn" data-filter="A">🔵 A-Tier</button>
+      <button class="filter-btn" data-filter="B">🟣 B-Tier</button>
+      <button class="filter-btn" data-filter="C">⚪ C-Tier</button>
+      <button class="filter-btn" data-filter="PH">🇵🇭 Philippines</button>
+      <select class="sort-select" id="sortSelect">
+        <option value="score">Sort: Best Score</option>
+        <option value="cost-low">Sort: Lowest Cost</option>
+        <option value="cost-high">Sort: Highest Cost</option>
+        <option value="flight">Sort: Shortest Flight</option>
+        <option value="wildlife">Sort: Best Wildlife</option>
+        <option value="kid">Sort: Kid Magic</option>
+      </select>
+    </div>
+    <div class="filters-row" id="actFilters">
+      <span class="filter-label">Activities:</span>
+      <button class="act-btn" data-act="beach">🏖️ Beach</button>
+      <button class="act-btn" data-act="sharks">🦈 Sharks</button>
+      <button class="act-btn" data-act="wildlife">🐻 Wildlife</button>
+      <button class="act-btn" data-act="snorkel">🤿 Snorkel/Dive</button>
+      <button class="act-btn" data-act="hiking">🥾 Hiking</button>
+      <button class="act-btn" data-act="boats">⛵ Boats</button>
+      <button class="act-btn" data-act="culture">🏛️ History/Culture</button>
+      <button class="act-btn" data-act="food">🍽️ Foodie</button>
+      <button class="act-btn" data-act="safari">🦁 Safari</button>
+      <button class="act-btn" data-act="lakes">🏞️ Lakes</button>
+    </div>
+  </nav>
+
+  <main class="grid-container">
+    <div class="map-toggle-bar">
+      <div class="view-btns">
+        <button class="view-btn active" onclick="setView('grid')">🃏 Cards</button>
+        <button class="view-btn" onclick="setView('map')">🗺️ Map</button>
+      </div>
+    </div>
+    <p class="results-count" id="resultsCount"></p>
+    <div id="mapContainer"></div>
+    <div class="dest-grid" id="destGrid">
+      <div class="loading"><div class="spinner"></div><p>Loading destinations...</p></div>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal"></div>
+  </div>
+  <button class="modal-close" id="modalCloseBtn" style="display:none" onclick="closeModal()">✕</button>
+
+  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <!-- WALKTHROUGH -->
+  <div class="wt-overlay" id="wtOverlay" onclick="if(event.target===this)endWalkthrough()">
+    <div class="wt-tooltip" id="wtTooltip"></div>
+  </div>
+
+  <script>
+    // ===== ACTIVITY TAGS PER DESTINATION =====
+    const activityTags = {
+      'big-island-hawaii':         ['beach','snorkel','wildlife','hiking','culture','boats','food'],
+      'baja-california-sea-of-cortez': ['beach','sharks','snorkel','wildlife','boats','food'],
+      'oahu-hawaii':               ['beach','sharks','snorkel','culture','hiking','food'],
+      'moorea':                    ['beach','sharks','snorkel','wildlife','boats'],
+      'bora-bora':                 ['beach','sharks','snorkel','boats','food'],
+      'costa-rica':                ['beach','wildlife','hiking','culture','food'],
+      'banff':                     ['hiking','wildlife','lakes','culture'],
+      'vancouver-island':          ['wildlife','hiking','boats','beach'],
+      'swiss-alps':                ['hiking','lakes','culture','food','boats'],
+      'riviera-maya':              ['beach','sharks','snorkel','culture','food'],
+      'fiji':                      ['beach','snorkel','wildlife','boats'],
+      'austria':                   ['hiking','lakes','culture','food'],
+      'hokkaido':                  ['wildlife','hiking','food','culture'],
+      'slovenia-lake-bled':        ['lakes','hiking','culture','food'],
+      'copenhagen-denmark':        ['culture','food','boats'],
+      'iceland-golden-circle':     ['wildlife','hiking','boats'],
+      'galapagos-ecuador':         ['wildlife','sharks','snorkel','boats','hiking'],
+      'italian-lakes-como-garda':  ['lakes','boats','food','culture'],
+      'ireland-castles':           ['culture','hiking','boats','food'],
+      'finnish-lakeland':          ['lakes','wildlife','hiking'],
+      'katmai-alaska':             ['wildlife','hiking','boats'],
+      'norwegian-fjords':          ['boats','hiking','wildlife'],
+      'lord-howe-island-australia':['beach','snorkel','wildlife','hiking'],
+      'madeira-portugal':          ['hiking','boats','wildlife','food'],
+      'basque-coast-spain':        ['food','beach','culture','boats'],
+      'amanpulo-pamalican':        ['beach','snorkel','boats'],
+      'banwa-private-island':      ['beach','snorkel','boats'],
+      'ariara-island':             ['beach','snorkel','boats'],
+      'pangatalan-island':         ['beach','snorkel','wildlife'],
+      'brother-island-el-nido':    ['beach','snorkel','boats'],
+      'haida-gwaii-canada':        ['wildlife','culture','boats','hiking'],
+      'maasai-mara-kenya':         ['safari','wildlife','culture'],
+      'cape-town-south-africa':    ['sharks','safari','wildlife','hiking','culture'],
+      'azores-portugal':           ['wildlife','boats','hiking','lakes'],
+      'monterey-big-sur-california':['wildlife','beach','hiking','food'],
+      'lofoten-islands-norway':     ['wildlife','hiking','boats','food'],
+      'oman-muscat-jebel-akhdar':   ['beach','wildlife','snorkel','culture','hiking'],
+      'tasmania-australia':         ['wildlife','hiking','food','beach'],
+      'faroe-islands':              ['wildlife','hiking','boats'],
+      'borneo-sabah-malaysia':      ['wildlife','hiking','snorkel','boats'],
+      'patagonia-argentina-chile':  ['hiking','wildlife','boats','lakes'],
+      'maldives':                   ['beach','sharks','snorkel','boats','food'],
+      'canary-islands-spain':       ['beach','wildlife','boats','hiking','food'],
+      'croatia-dubrovnik-islands':  ['beach','boats','snorkel','culture','food'],
+      'new-zealand-south-island':   ['wildlife','hiking','boats','lakes','food'],
+      'sri-lanka':                  ['wildlife','beach','culture','hiking','food'],
+      'bermuda':                    ['beach','snorkel','sharks','boats','culture'],
+      'turks-and-caicos':           ['beach','sharks','snorkel','wildlife','food'],
+      'japanese-alps':              ['hiking','wildlife','culture','food','lakes'],
+      'sardinia':                   ['beach','boats','food','culture','snorkel'],
+      'scottish-highlands':         ['wildlife','hiking','culture','boats','lakes'],
+      'jordan':                     ['culture','hiking','snorkel','wildlife'],
+      'seychelles':                 ['beach','wildlife','snorkel','boats'],
+      'quebec-charlevoix':          ['wildlife','culture','food','boats'],
+      'mauritius':                  ['beach','wildlife','snorkel','boats','food'],
+      'channel-islands-ojai':       ['wildlife','snorkel','boats','hiking','beach'],
+      'greek-islands-naxos-milos':  ['beach','boats','food','culture','snorkel'],
+    };
+
+    const actLabels = {
+      beach: '🏖️ Beach', sharks: '🦈 Sharks', wildlife: '🐻 Wildlife', snorkel: '🤿 Snorkel',
+      hiking: '🥾 Hiking', boats: '⛵ Boats', culture: '🏛️ Culture', food: '🍽️ Foodie',
+      safari: '🦁 Safari', lakes: '🏞️ Lakes',
+    };
+
+    // ===== DATA =====
+    let allDestinations = [];
+    let activeActFilters = new Set();
+
+    const heroThemes = {
+      'big-island-hawaii': ['beach', '🌋'], 'baja-california-sea-of-cortez': ['island', '🦈'],
+      'oahu-hawaii': ['beach', '🦈'], 'moorea': ['island', '🐋'], 'bora-bora': ['island', '🏝️'],
+      'costa-rica': ['tropical', '🦥'], 'banff': ['mountain', '🏔️'], 'vancouver-island': ['mountain', '🐻'],
+      'swiss-alps': ['mountain', '🏔️'], 'riviera-maya': ['island', '🐢'], 'fiji': ['island', '🐠'],
+      'austria': ['mountain', '🏰'], 'hokkaido': ['mountain', '🦌'], 'slovenia-lake-bled': ['mountain', '🏞️'],
+      'copenhagen-denmark': ['europe', '🧱'], 'iceland-golden-circle': ['arctic', '🐋'],
+      'galapagos-ecuador': ['island', '🐢'], 'italian-lakes-como-garda': ['europe', '🚤'],
+      'ireland-castles': ['europe', '🏰'], 'finnish-lakeland': ['arctic', '🦌'],
+      'katmai-alaska': ['arctic', '🐻'], 'norwegian-fjords': ['arctic', '⛵'],
+      'lord-howe-island-australia': ['island', '🐦'], 'madeira-portugal': ['island', '🌺'],
+      'basque-coast-spain': ['europe', '🍷'], 'amanpulo-pamalican': ['tropical', '🏝️'],
+      'banwa-private-island': ['tropical', '🏝️'], 'ariara-island': ['tropical', '🏝️'],
+      'pangatalan-island': ['tropical', '🌿'], 'brother-island-el-nido': ['tropical', '🏝️'],
+      'haida-gwaii-canada': ['mountain', '🦅'], 'maasai-mara-kenya': ['safari', '🦁'],
+      'cape-town-south-africa': ['safari', '🦈'], 'azores-portugal': ['island', '🐋'],
+      'monterey-big-sur-california': ['beach', '🦦'],
+      'lofoten-islands-norway': ['arctic', '🌅'],
+      'oman-muscat-jebel-akhdar': ['safari', '🐢'],
+      'tasmania-australia': ['mountain', '🦘'],
+      'faroe-islands': ['arctic', '🐑'],
+      'borneo-sabah-malaysia': ['tropical', '🦧'],
+      'patagonia-argentina-chile': ['mountain', '🏔️'],
+      'maldives': ['island', '🦈'],
+      'canary-islands-spain': ['island', '🌋'],
+      'croatia-dubrovnik-islands': ['europe', '⛵'],
+      'new-zealand-south-island': ['mountain', '🐋'],
+      'sri-lanka': ['tropical', '🐘'],
+      'bermuda': ['island', '🏝️'],
+      'turks-and-caicos': ['island', '🦈'],
+      'japanese-alps': ['mountain', '🐒'],
+      'sardinia': ['island', '🏖️'],
+      'scottish-highlands': ['mountain', '🏰'],
+      'jordan': ['safari', '🏜️'],
+      'seychelles': ['island', '🐢'],
+      'quebec-charlevoix': ['mountain', '🐋'],
+      'mauritius': ['island', '🐢'],
+      'channel-islands-ojai': ['island', '🦊'],
+      'greek-islands-naxos-milos': ['island', '🏛️'],
+    };
+
+    const scoreLabels = {
+      wildlife: ['🦈', 'Wildlife'], kidMagic: ['✨', 'Kid Magic'], food: ['🍽️', 'Food'],
+      travelEase: ['✈️', 'Travel'], weatherFit: ['🌡️', 'Weather'], toddlerSafe: ['👶', 'Toddler'],
+      grandparent: ['👴', 'Grandparent'], luxury: ['💎', 'Luxury'], safety: ['🛡️', 'Safety'],
+    };
+    const scoreColors = {
+      wildlife: '#0077B6', kidMagic: '#FFD700', food: '#FF6B6B', travelEase: '#52B788',
+      weatherFit: '#DDA15E', toddlerSafe: '#90E0EF', grandparent: '#7B68EE', luxury: '#023E8A', safety: '#2D6A4F',
+    };
+
+    // ===== LOAD DATA =====
+    async function loadData() {
+      try {
+        const res = await fetch('destinations.json');
+        if (res.ok) {
+          allDestinations = await res.json();
+          allDestinations.forEach(d => {
+            if (d.tier === 'B-' || (d.name && d.name.includes('Philippines'))) d.tier = 'PH';
+          });
+        }
+      } catch (e) { console.warn('Load error', e); }
+      if (!allDestinations.length) {
+        document.getElementById('destGrid').innerHTML = '<p style="text-align:center;padding:40px;color:#999">No data found. Run normalize.py first, then refresh.</p>';
+        return;
+      }
+      const counts = { all: allDestinations.length };
+      allDestinations.forEach(d => { counts[d.tier] = (counts[d.tier] || 0) + 1; });
+      document.querySelectorAll('#tierFilters .filter-btn').forEach(btn => {
+        const f = btn.dataset.filter;
+        if (counts[f] !== undefined) btn.textContent = btn.textContent.replace(/\(\d+\)/, `(${counts[f]})`);
+      });
+      renderGrid(allDestinations);
+
+      // Show walkthrough on first visit
+      if (!localStorage.getItem('vp_walkthrough_done')) {
+        setTimeout(() => startWalkthrough(), 800);
+      }
+    }
+
+    // ===== RENDER GRID =====
+    function renderGrid(destinations) {
+      const grid = document.getElementById('destGrid');
+      document.getElementById('resultsCount').textContent = `Showing ${destinations.length} destination${destinations.length !== 1 ? 's' : ''}`;
+
+      if (!destinations.length) {
+        grid.innerHTML = '<div class="no-results"><h3>No destinations match those filters</h3><p>Try removing an activity filter or changing the tier</p></div>';
+        return;
+      }
+
+      grid.innerHTML = destinations.map(d => {
+        const theme = heroThemes[d.id] || ['beach', d.heroEmoji || '🌍'];
+        const tierClass = (d.tier === 'PH' || d.tier === 'B-') ? 'PH' : d.tier;
+        const tierLabel = (d.tier === 'PH' || d.tier === 'B-') ? '🇵🇭 Philippines' : d.tier + '-Tier';
+        const topScores = Object.entries(d.scores || {}).filter(([k]) => k !== 'total').slice(0, 5);
+        const tags = activityTags[d.id] || [];
+
+        return `
+          <div class="dest-card" onclick="openModal('${d.id}')">
+            <span class="card-tier tier-${tierClass}">${tierLabel}</span>
+            <div class="card-hero ${theme[0]}">${theme[1]}</div>
+            <div class="card-body">
+              <div class="card-name">${d.name}</div>
+              <div class="card-tagline">${d.tagline || ''}</div>
+              <div class="card-tags">${tags.map(t => `<span class="card-tag">${actLabels[t] || t}</span>`).join('')}</div>
+              <div class="card-stats">
+                <div class="stat"><span class="stat-icon">✈️</span><span class="stat-value">${d.flightTime || ''}</span></div>
+                <div class="stat"><span class="stat-icon">🌡️</span><span class="stat-value">${d.weather ? d.weather.split(',')[0] : ''}</span></div>
+                <div class="stat"><span class="stat-icon">🦈</span><span class="stat-value">${d.scores?.wildlife || 0}/10</span></div>
+                <div class="stat"><span class="stat-icon">✨</span><span class="stat-value">${d.scores?.kidMagic || 0}/10</span></div>
+              </div>
+              <div class="card-scores">
+                ${topScores.map(([k, v]) => `
+                  <div class="score-bar" title="${k}: ${v}/10">
+                    <div class="score-fill" style="width:${v * 10}%;background:${scoreColors[k] || '#0077B6'}"></div>
+                  </div>
+                `).join('')}
+              </div>
+              <div class="card-footer">
+                <span class="card-cost">${d.estimatedCost || ''}</span>
+                <span class="card-score-total">${d.scores?.total || 0}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // ===== MODAL =====
+    function openModal(id) {
+      const d = allDestinations.find(x => x.id === id);
+      if (!d) return;
+      const theme = heroThemes[d.id] || ['beach', d.heroEmoji || '🌍'];
+      const overlay = document.getElementById('modalOverlay');
+      const modal = document.getElementById('modal');
+
+      modal.innerHTML = `
+        <div class="modal-hero ${theme[0]}">${theme[1]}</div>
+        <div class="modal-content">
+          <h2 class="modal-title">${d.name}</h2>
+          <p class="modal-tagline">${d.tagline || ''}</p>
+
+          <div class="quick-stats">
+            <div class="quick-stat"><span class="qs-icon">✈️</span><span class="qs-label">Flight</span><span class="qs-value">${d.flightTime || 'N/A'}</span></div>
+            <div class="quick-stat"><span class="qs-icon">🌡️</span><span class="qs-label">Weather</span><span class="qs-value">${d.weather || 'N/A'}</span></div>
+            <div class="quick-stat"><span class="qs-icon">💰</span><span class="qs-label">Est. Cost</span><span class="qs-value">${d.estimatedCost || 'N/A'}</span></div>
+            <div class="quick-stat"><span class="qs-icon">🏆</span><span class="qs-label">Score</span><span class="qs-value">${d.scores?.total || 0}/100</span></div>
+          </div>
+
+          <div class="scorecard">
+            ${Object.entries(d.scores || {}).filter(([k]) => k !== 'total').map(([k, v]) => {
+              const [emoji, label] = scoreLabels[k] || ['📊', k];
+              return `<div class="score-item"><span class="score-emoji">${emoji}</span><span class="score-name">${label}</span><span class="score-val">${v}/10</span></div>`;
+            }).join('')}
+          </div>
+
+          ${d.flights ? `
+            <h3 class="section-title">✈️ Flights</h3>
+            ${d.flights.outbound ? `<div class="flight-card"><div class="flight-route">${d.flights.outbound.route || 'Outbound'}</div><div class="flight-detail">${d.flights.outbound.airline || ''} &bull; ${d.flights.outbound.class || ''} &bull; ${d.flights.outbound.duration || ''}</div><div class="flight-detail">Depart: ${d.flights.outbound.depart || ''} &rarr; Arrive: ${d.flights.outbound.arrive || ''}</div></div>` : ''}
+            ${d.flights.return ? `<div class="flight-card"><div class="flight-route">${d.flights.return.route || 'Return'}</div><div class="flight-detail">${d.flights.return.airline || ''} &bull; ${d.flights.return.class || ''} &bull; ${d.flights.return.duration || ''}</div><div class="flight-detail">Depart: ${d.flights.return.depart || ''} &rarr; Arrive: ${d.flights.return.arrive || ''}</div></div>` : ''}
+          ` : ''}
+
+          ${d.hotel ? `
+            <h3 class="section-title">🏨 Accommodation</h3>
+            <div class="hotel-card">
+              <div class="hotel-name">${d.hotel.url ? `<a href="${d.hotel.url}" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-decoration-color:var(--ocean-light)">${d.hotel.name || ''}</a>` : (d.hotel.name || '')} ${d.hotel.url ? '<span style="font-size:0.75rem;color:var(--ocean)">↗</span>' : ''}</div>
+              <div class="hotel-rooms">
+                ${(d.hotel.rooms || []).map(r => `<div class="room-row"><div class="room-info"><div class="room-name">${r.name || ''}</div><div class="room-for">${r.for || ''}</div></div><span class="room-rate">${r.rate || ''}</span></div>`).join('')}
+              </div>
+              ${d.hotel.highlights?.length ? `<div class="hotel-highlights">${d.hotel.highlights.map(h => `<span class="highlight-tag">${h}</span>`).join('')}</div>` : ''}
+            </div>
+          ` : ''}
+
+          ${d.days?.length ? `
+            <h3 class="section-title">📅 Day-by-Day Itinerary</h3>
+            <p style="font-size:0.85rem;color:var(--text-light);margin:-8px 0 12px;">Click a day to expand or collapse</p>
+            ${d.days.map((day, i) => `
+              <div class="day-block">
+                <div class="day-header" onclick="toggleDay(this)">
+                  <span class="day-num">Day ${day.day}</span>
+                  ${day.title || ''}
+                  <span class="day-toggle${i > 2 ? ' collapsed' : ''}">&darr;</span>
+                </div>
+                <div class="day-schedule${i > 2 ? ' collapsed' : ''}">
+                  ${(day.schedule || []).map(s => {
+                    const isNap = s.activity && s.activity.toLowerCase().includes('nap');
+                    const actText = s.url
+                      ? `<a href="${s.url}" target="_blank" rel="noopener" style="color:var(--ocean-dark);text-decoration:underline;text-decoration-color:var(--ocean-light)">${s.activity || ''}</a> <span style="font-size:0.7rem;color:var(--ocean)">↗</span>`
+                      : (s.activity || '');
+                    return `<div class="schedule-item${isNap ? ' is-nap' : ''}"><span class="sched-time">${s.time || ''}</span><span class="sched-icon">${s.icon || '📍'}</span><div class="sched-body"><div class="sched-activity">${actText}</div>${s.who ? `<span class="sched-who">${s.who}</span>` : ''}</div></div>`;
+                  }).join('')}
+                </div>
+              </div>
+            `).join('')}
+          ` : ''}
+
+          ${d.costBreakdown ? `
+            <h3 class="section-title">💰 Cost Breakdown</h3>
+            <table class="cost-table">
+              ${d.costBreakdown.flights ? `<tr><td>✈️ Flights</td><td>${d.costBreakdown.flights}</td></tr>` : ''}
+              ${d.costBreakdown.hotel ? `<tr><td>🏨 Hotel</td><td>${d.costBreakdown.hotel}</td></tr>` : ''}
+              ${d.costBreakdown.activities ? `<tr><td>🎯 Activities</td><td>${d.costBreakdown.activities}</td></tr>` : ''}
+              ${d.costBreakdown.food ? `<tr><td>🍽️ Food & Dining</td><td>${d.costBreakdown.food}</td></tr>` : ''}
+              ${d.costBreakdown.transfers ? `<tr><td>🚐 Transfers</td><td>${d.costBreakdown.transfers}</td></tr>` : ''}
+              <tr><td>Total Estimate</td><td>${d.costBreakdown.total || d.estimatedCost || ''}</td></tr>
+            </table>
+          ` : ''}
+
+          ${d.tips?.length ? `
+            <h3 class="section-title">💡 Family Tips</h3>
+            <ul class="tips-list">${d.tips.map(t => `<li>${t}</li>`).join('')}</ul>
+          ` : ''}
+        </div>
+      `;
+
+      overlay.classList.add('open');
+      document.getElementById('modalCloseBtn').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      overlay.scrollTop = 0;
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.getElementById('modalCloseBtn').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    function toggleDay(header) {
+      header.nextElementSibling.classList.toggle('collapsed');
+      header.querySelector('.day-toggle').classList.toggle('collapsed');
+    }
+    document.getElementById('modalOverlay').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // ===== TIER FILTERS =====
+    document.getElementById('tierFilters').addEventListener('click', e => {
+      if (!e.target.classList.contains('filter-btn')) return;
+      document.querySelectorAll('#tierFilters .filter-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      applyFiltersAndSort();
+    });
+
+    // ===== ACTIVITY FILTERS =====
+    document.getElementById('actFilters').addEventListener('click', e => {
+      if (!e.target.classList.contains('act-btn')) return;
+      e.target.classList.toggle('active');
+      const act = e.target.dataset.act;
+      if (activeActFilters.has(act)) activeActFilters.delete(act);
+      else activeActFilters.add(act);
+      applyFiltersAndSort();
+    });
+
+    document.getElementById('sortSelect').addEventListener('change', () => applyFiltersAndSort());
+
+    function parseCostLow(str) {
+      if (!str) return 999999;
+      const m = str.match(/\$([\d,]+)/);
+      return m ? parseInt(m[1].replace(/,/g, '')) * 1000 : 999999;
+    }
+    function parseFlightHrs(str) {
+      if (!str) return 999;
+      const m = str.match(/([\d.]+)/);
+      return m ? parseFloat(m[1]) : 999;
+    }
+
+    function applyFiltersAndSort() {
+      const tier = document.querySelector('#tierFilters .filter-btn.active')?.dataset.filter || 'all';
+      const sortBy = document.getElementById('sortSelect').value;
+
+      let filtered = tier === 'all' ? [...allDestinations]
+        : tier === 'PH' ? allDestinations.filter(d => d.tier === 'PH' || d.tier === 'B-')
+        : allDestinations.filter(d => d.tier === tier);
+
+      // Activity filter: destination must have ALL selected activities
+      if (activeActFilters.size > 0) {
+        filtered = filtered.filter(d => {
+          const tags = activityTags[d.id] || [];
+          return [...activeActFilters].every(a => tags.includes(a));
+        });
+      }
+
+      filtered.sort((a, b) => {
+        switch (sortBy) {
+          case 'score': return (b.scores?.total || 0) - (a.scores?.total || 0);
+          case 'cost-low': return parseCostLow(a.estimatedCost) - parseCostLow(b.estimatedCost);
+          case 'cost-high': return parseCostLow(b.estimatedCost) - parseCostLow(a.estimatedCost);
+          case 'flight': return parseFlightHrs(a.flightTime) - parseFlightHrs(b.flightTime);
+          case 'wildlife': return (b.scores?.wildlife || 0) - (a.scores?.wildlife || 0);
+          case 'kid': return (b.scores?.kidMagic || 0) - (a.scores?.kidMagic || 0);
+          default: return 0;
+        }
+      });
+      renderGrid(filtered);
+      if (map && document.getElementById('mapContainer').classList.contains('show')) {
+        updateMapMarkers(filtered);
+      }
+    }
+
+    // ===== BACK TO TOP =====
+    window.addEventListener('scroll', () => {
+      document.getElementById('backTop').classList.toggle('show', window.scrollY > 400);
+    });
+
+    // ===== MAP =====
+    const destCoords = {
+      'big-island-hawaii': [19.92, -155.89], 'baja-california-sea-of-cortez': [23.05, -109.70],
+      'oahu-hawaii': [21.44, -158.00], 'moorea': [-17.53, -149.83], 'bora-bora': [-16.50, -151.74],
+      'costa-rica': [10.63, -85.69], 'banff': [51.18, -115.57], 'vancouver-island': [49.15, -125.90],
+      'swiss-alps': [46.95, -8.39], 'riviera-maya': [20.63, -87.08], 'fiji': [-17.75, 177.95],
+      'austria': [47.77, 13.29], 'hokkaido': [42.92, 141.35], 'slovenia-lake-bled': [46.36, 14.09],
+      'copenhagen-denmark': [55.68, 12.57], 'iceland-golden-circle': [64.15, -21.94],
+      'galapagos-ecuador': [-0.75, -90.30], 'italian-lakes-como-garda': [45.99, 9.26],
+      'ireland-castles': [53.53, -9.53], 'finnish-lakeland': [61.73, 29.10],
+      'katmai-alaska': [58.75, -154.89], 'norwegian-fjords': [62.10, 7.10],
+      'lord-howe-island-australia': [-31.55, 159.08], 'madeira-portugal': [32.65, -16.91],
+      'basque-coast-spain': [43.32, -1.98], 'amanpulo-pamalican': [11.57, 120.71],
+      'banwa-private-island': [10.10, 119.28], 'ariara-island': [12.02, 120.10],
+      'pangatalan-island': [10.15, 118.85], 'brother-island-el-nido': [11.18, 119.42],
+      'haida-gwaii-canada': [53.25, -132.07], 'maasai-mara-kenya': [-1.50, 35.14],
+      'cape-town-south-africa': [-33.92, 18.42], 'azores-portugal': [37.75, -25.67],
+      'monterey-big-sur-california': [36.60, -121.90],
+      'lofoten-islands-norway': [68.23, 14.57],
+      'oman-muscat-jebel-akhdar': [23.20, 57.30],
+      'tasmania-australia': [-42.05, 146.80],
+      'faroe-islands': [62.01, -6.77],
+      'borneo-sabah-malaysia': [5.98, 116.07],
+      'patagonia-argentina-chile': [-50.94, -73.41],
+      'maldives': [4.17, 73.51],
+      'canary-islands-spain': [28.29, -16.63],
+      'croatia-dubrovnik-islands': [42.65, 18.09],
+      'new-zealand-south-island': [-45.03, 168.66],
+      'sri-lanka': [7.87, 80.77],
+      'bermuda': [32.30, -64.78],
+      'turks-and-caicos': [21.79, -72.17],
+      'japanese-alps': [36.14, 137.25],
+      'sardinia': [40.92, 9.50],
+      'scottish-highlands': [57.48, -5.49],
+      'jordan': [30.33, 35.44],
+      'seychelles': [-4.68, 55.49],
+      'quebec-charlevoix': [46.81, -71.21],
+      'mauritius': [-20.35, 57.55],
+      'channel-islands-ojai': [34.01, -119.77],
+      'greek-islands-naxos-milos': [37.10, 25.38],
+    };
+    const laxCoords = [33.94, -118.41];
+
+    let map = null;
+    let mapMarkers = [];
+    let laxMarker = null;
+
+    // Bezier curve between two points for visual flight arc
+    function flightArc(start, end, numPoints) {
+      const points = [];
+      const midLat = (start[0] + end[0]) / 2;
+      const midLon = (start[1] + end[1]) / 2;
+      const lonDist = Math.abs(end[1] - start[1]);
+      const bulge = Math.min(lonDist * 0.12, 20) * (midLat >= 0 ? 1 : -1);
+      for (let i = 0; i <= numPoints; i++) {
+        const t = i / numPoints;
+        const lat = (1-t)*(1-t)*start[0] + 2*(1-t)*t*(midLat + bulge) + t*t*end[0];
+        const lon = (1-t)*(1-t)*start[1] + 2*(1-t)*t*midLon + t*t*end[1];
+        points.push([lat, lon]);
+      }
+      return points;
+    }
+
+    // Decide whether to fly east or west from LAX, return the
+    // destination longitude shifted onto the same "copy" of the map as LAX
+    // so the polyline takes the short way around.
+    function routeLon(destLon) {
+      const lax = laxCoords[1]; // -118.41
+      let east = ((destLon - lax) % 360 + 360) % 360;   // 0-360
+      if (east > 180) {
+        // shorter to go west → negative offset
+        return lax - (360 - east);
+      }
+      return lax + east;
+    }
+
+    function initMap() {
+      if (map) return;
+
+      map = L.map('mapContainer', {
+        scrollWheelZoom: true,
+        worldCopyJump: true,        // keeps markers jumping to visible copy
+        minZoom: 2,
+        maxZoom: 10,
+      }).setView([20, 0], 2);       // center on prime meridian — whole world visible
+
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+        maxZoom: 18,
+      }).addTo(map);
+
+      // LAX marker
+      const laxIcon = L.divIcon({
+        className: '',
+        html: '<div style="background:#023E8A;color:white;padding:5px 12px;border-radius:20px;font-weight:700;font-size:13px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.3);border:2px solid white">✈️ LAX (Home)</div>',
+        iconSize: [120, 30], iconAnchor: [60, 15],
+      });
+      laxMarker = L.marker(laxCoords, { icon: laxIcon, zIndexOffset: 1000 }).addTo(map);
+    }
+
+    function updateMapMarkers(destinations) {
+      if (!map) return;
+      mapMarkers.forEach(m => map.removeLayer(m));
+      mapMarkers = [];
+
+      const tierColors = { S: '#FFA500', A: '#0077B6', B: '#7B68EE', C: '#6c757d', PH: '#52B788' };
+
+      destinations.forEach(d => {
+        const coords = destCoords[d.id];
+        if (!coords) return;
+
+        const color = tierColors[d.tier] || '#0077B6';
+        const icon = L.divIcon({
+          className: '',
+          html: `<div style="background:${color};color:white;padding:3px 10px;border-radius:16px;font-size:11px;font-weight:700;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,0.3);cursor:pointer;border:2px solid white">${(heroThemes[d.id]||['','🌍'])[1]} ${d.scores?.total || ''}</div>`,
+          iconSize: null, iconAnchor: [30, 14],
+        });
+
+        // Place marker at real coords (worldCopyJump handles visibility)
+        const marker = L.marker(coords, { icon }).addTo(map);
+
+        // Flight arc: route through the shorter path
+        const arcEnd = [coords[0], routeLon(coords[1])];
+        const arcPoints = flightArc(laxCoords, arcEnd, 40);
+        const line = L.polyline(arcPoints, {
+          color, weight: 2, opacity: 0.35, dashArray: '8 5', smoothFactor: 1,
+        }).addTo(map);
+        mapMarkers.push(line);
+
+        // Popup
+        const tags = (activityTags[d.id] || []).map(t => actLabels[t] || t).join(', ');
+        marker.bindPopup(`
+          <div style="min-width:220px;font-family:system-ui,sans-serif">
+            <div style="font-size:1.1rem;font-weight:700;margin-bottom:4px">${d.name}</div>
+            <div style="font-size:0.85rem;color:#555;margin-bottom:8px">${d.tagline || ''}</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:0.82rem;margin-bottom:8px">
+              <span>✈️ ${d.flightTime || ''}</span>
+              <span>🌡️ ${d.weather ? d.weather.split(',')[0] : ''}</span>
+              <span>💰 ${d.estimatedCost || ''}</span>
+              <span>🏆 Score: ${d.scores?.total || 0}</span>
+            </div>
+            <div style="font-size:0.78rem;color:#777;margin-bottom:8px">${tags}</div>
+            <button onclick="closeMapPopup();openModal('${d.id}')" style="background:#0077B6;color:white;border:none;padding:6px 16px;border-radius:20px;font-weight:600;cursor:pointer;width:100%;font-size:0.85rem">View Full Itinerary →</button>
+          </div>
+        `, { maxWidth: 280 });
+
+        mapMarkers.push(marker);
+      });
+    }
+
+    function closeMapPopup() { if (map) map.closePopup(); }
+
+    function setView(view) {
+      document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+      document.querySelector(`.view-btn[onclick="setView('${view}')"]`).classList.add('active');
+
+      const mapEl = document.getElementById('mapContainer');
+      const gridEl = document.getElementById('destGrid');
+
+      if (view === 'map') {
+        mapEl.classList.add('show');
+        gridEl.style.display = 'none';
+        initMap();
+        // Reapply current filters to map
+        const tier = document.querySelector('#tierFilters .filter-btn.active')?.dataset.filter || 'all';
+        let filtered = tier === 'all' ? [...allDestinations]
+          : tier === 'PH' ? allDestinations.filter(d => d.tier === 'PH' || d.tier === 'B-')
+          : allDestinations.filter(d => d.tier === tier);
+        if (activeActFilters.size > 0) {
+          filtered = filtered.filter(d => [...activeActFilters].every(a => (activityTags[d.id] || []).includes(a)));
+        }
+        updateMapMarkers(filtered);
+        setTimeout(() => map.invalidateSize(), 100);
+      } else {
+        mapEl.classList.remove('show');
+        gridEl.style.display = '';
+      }
+    }
+
+    // ===== WALKTHROUGH =====
+    const wtSteps = [
+      {
+        icon: '👋',
+        title: 'Welcome to your Vacation Planner!',
+        text: 'This tool compares <strong>35 destinations</strong> for your family trip <strong>(June 27 – July 5, 2026)</strong> from LAX.<br><br>Each destination has a full day-by-day itinerary, hotel picks, flight details, and cost estimates — all tailored for your group: 2 grandparents, 2 parents, and 3 kids (ages 5, 2.5, and 1).',
+      },
+      {
+        icon: '⭐',
+        title: 'Tier Rankings',
+        text: 'Destinations are ranked into tiers based on overall fit:<br><br><strong style="color:#FFA500">S-Tier</strong> — Best overall (easy travel, great for all ages)<br><strong style="color:#0077B6">A-Tier</strong> — Excellent with one tradeoff<br><strong style="color:#7B68EE">B-Tier</strong> — Strong but notable compromises<br><strong style="color:#6c757d">C-Tier</strong> — Worth considering, challenging logistics<br><strong style="color:#52B788">🇵🇭 Philippines</strong> — Private islands (monsoon risk in July)',
+      },
+      {
+        icon: '🏖️',
+        title: 'Activity Filters',
+        text: 'Use the <strong>activity buttons</strong> (Beach, Sharks, Wildlife, etc.) to filter by what your family loves.<br><br>Tap multiple — destinations must match <strong>all</strong> selected activities. Try <strong>🦈 Sharks + 🏖️ Beach</strong> to find the perfect trip for your shark-loving 5-year-old!',
+      },
+      {
+        icon: '📊',
+        title: 'Sort & Compare',
+        text: 'Use the <strong>sort dropdown</strong> to rank by:<br><br>• <strong>Best Score</strong> — Overall family fit<br>• <strong>Lowest/Highest Cost</strong> — Budget planning<br>• <strong>Shortest Flight</strong> — Grandma hates turbulence!<br>• <strong>Best Wildlife</strong> — Animals everywhere<br>• <strong>Kid Magic</strong> — Maximum wow factor for the 5-year-old',
+      },
+      {
+        icon: '🗺️',
+        title: 'Map View',
+        text: 'Switch to <strong>Map View</strong> to see all destinations on a world map with flight lines from LAX. Each pin shows the destination\'s score — click it for a quick summary and link to the full itinerary.',
+      },
+      {
+        icon: '🃏',
+        title: 'Destination Cards',
+        text: 'Each card shows: flight time, weather, wildlife & kid magic scores, activity tags, cost estimate, and overall score.<br><br><strong>Click any card</strong> to see the full itinerary with:<br>• Specific flights, hotel rooms, and rates<br>• Day-by-day schedule with nap times<br>• Cost breakdown and family tips<br>• Collapsible days — click day headers to expand',
+      },
+      {
+        icon: '❓',
+        title: 'Need Help Again?',
+        text: 'Click the <strong>?</strong> button in the top-right corner anytime to replay this walkthrough.<br><br>Happy planning! 🌴',
+      },
+    ];
+
+    let wtStep = 0;
+
+    function startWalkthrough() {
+      wtStep = 0;
+      document.getElementById('wtOverlay').classList.add('open');
+      renderWtStep();
+    }
+
+    function endWalkthrough() {
+      document.getElementById('wtOverlay').classList.remove('open');
+      localStorage.setItem('vp_walkthrough_done', '1');
+    }
+
+    function renderWtStep() {
+      const step = wtSteps[wtStep];
+      const tooltip = document.getElementById('wtTooltip');
+      const dots = wtSteps.map((_, i) => `<div class="wt-dot${i === wtStep ? ' active' : ''}"></div>`).join('');
+      const isFirst = wtStep === 0;
+      const isLast = wtStep === wtSteps.length - 1;
+
+      tooltip.innerHTML = `
+        <div class="wt-highlight-img">${step.icon}</div>
+        <h3>${step.title}</h3>
+        <p>${step.text}</p>
+        <div class="wt-actions">
+          <div>
+            <div class="wt-step-label">Step ${wtStep + 1} of ${wtSteps.length}</div>
+            <div class="wt-dots">${dots}</div>
+            <button class="wt-skip" onclick="endWalkthrough()">Skip tour</button>
+          </div>
+          <div class="wt-btns">
+            ${!isFirst ? `<button class="wt-prev" onclick="prevWtStep()">← Back</button>` : ''}
+            ${isLast
+              ? `<button class="wt-done" onclick="endWalkthrough()">Let's Go! 🚀</button>`
+              : `<button class="wt-next" onclick="nextWtStep()">Next →</button>`
+            }
+          </div>
+        </div>
+      `;
+    }
+
+    function nextWtStep() {
+      wtStep++;
+      if (wtStep >= wtSteps.length) { endWalkthrough(); return; }
+      renderWtStep();
+    }
+    function prevWtStep() {
+      if (wtStep > 0) wtStep--;
+      renderWtStep();
+    }
+
+    // ===== INIT =====
+    loadData();
+  </script>
+</body>
+</html>
