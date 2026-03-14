@@ -393,6 +393,20 @@
         <option value="kid">Sort: Kid Magic</option>
       </select>
     </div>
+    <div class="filters-row" id="regionFilters">
+      <span class="filter-label">Region:</span>
+      <button class="act-btn" data-region="hawaii">🌺 Hawaii</button>
+      <button class="act-btn" data-region="usa-canada">🇺🇸 USA/Canada</button>
+      <button class="act-btn" data-region="mexico-caribbean">🌴 Mexico/Carib</button>
+      <button class="act-btn" data-region="central-south-america">🌎 C/S America</button>
+      <button class="act-btn" data-region="pacific-islands">🏝️ Pacific</button>
+      <button class="act-btn" data-region="indian-ocean">🐚 Indian Ocean</button>
+      <button class="act-btn" data-region="scandinavia">❄️ Scandinavia</button>
+      <button class="act-btn" data-region="europe">🇪🇺 Europe</button>
+      <button class="act-btn" data-region="asia">🏯 Asia</button>
+      <button class="act-btn" data-region="middle-east-africa">🌍 ME/Africa</button>
+      <button class="act-btn" data-region="oceania">🦘 Oceania</button>
+    </div>
     <div class="filters-row" id="actFilters">
       <span class="filter-label">Activities:</span>
       <button class="act-btn" data-act="beach">🏖️ Beach</button>
@@ -435,6 +449,50 @@
   </div>
 
   <script>
+    // ===== REGION TAGS PER DESTINATION =====
+    const regionTags = {
+      'big-island-hawaii': 'hawaii', 'oahu-hawaii': 'hawaii', 'kauai-hawaii': 'hawaii',
+      'baja-california-sea-of-cortez': 'mexico-caribbean', 'riviera-maya': 'mexico-caribbean',
+      'turks-and-caicos': 'mexico-caribbean', 'bermuda': 'mexico-caribbean',
+      'costa-rica': 'central-south-america', 'galapagos-ecuador': 'central-south-america',
+      'patagonia-argentina-chile': 'central-south-america',
+      'channel-islands-ojai': 'usa-canada', 'monterey-big-sur-california': 'usa-canada',
+      'katmai-alaska': 'usa-canada', 'banff': 'usa-canada', 'vancouver-island': 'usa-canada',
+      'haida-gwaii-canada': 'usa-canada', 'quebec-charlevoix': 'usa-canada',
+      'moorea': 'pacific-islands', 'bora-bora': 'pacific-islands', 'fiji': 'pacific-islands',
+      'maldives': 'indian-ocean', 'seychelles': 'indian-ocean', 'mauritius': 'indian-ocean', 'sri-lanka': 'indian-ocean',
+      'iceland-golden-circle': 'scandinavia', 'norwegian-fjords': 'scandinavia',
+      'lofoten-islands-norway': 'scandinavia', 'faroe-islands': 'scandinavia',
+      'finnish-lakeland': 'scandinavia', 'copenhagen-denmark': 'scandinavia',
+      'swiss-alps': 'europe', 'austria': 'europe', 'slovenia-lake-bled': 'europe',
+      'italian-lakes-como-garda': 'europe', 'sardinia': 'europe', 'croatia-dubrovnik-islands': 'europe',
+      'ireland-castles': 'europe', 'scottish-highlands': 'europe', 'basque-coast-spain': 'europe',
+      'madeira-portugal': 'europe', 'azores-portugal': 'europe', 'canary-islands-spain': 'europe',
+      'hokkaido': 'asia', 'japanese-alps': 'asia', 'borneo-sabah-malaysia': 'asia',
+      'amanpulo-pamalican': 'asia', 'banwa-private-island': 'asia', 'ariara-island': 'asia',
+      'pangatalan-island': 'asia', 'brother-island-el-nido': 'asia',
+      'oman-muscat-jebel-akhdar': 'middle-east-africa', 'jordan': 'middle-east-africa',
+      'maasai-mara-kenya': 'middle-east-africa', 'cape-town-south-africa': 'middle-east-africa',
+      'tasmania-australia': 'oceania', 'lord-howe-island-australia': 'oceania',
+      'new-zealand-south-island': 'oceania',
+    };
+
+    const regionLabels = {
+      'hawaii': '🌺 Hawaii',
+      'usa-canada': '🇺🇸 USA & Canada',
+      'mexico-caribbean': '🌴 Mexico & Caribbean',
+      'central-south-america': '🌎 Central & South America',
+      'pacific-islands': '🏝️ Pacific Islands',
+      'indian-ocean': '🐚 Indian Ocean',
+      'scandinavia': '❄️ Scandinavia',
+      'europe': '🇪🇺 Europe',
+      'asia': '🏯 Asia',
+      'middle-east-africa': '🌍 Middle East & Africa',
+      'oceania': '🦘 Oceania',
+    };
+
+    let activeRegionFilter = null;
+
     // ===== ACTIVITY TAGS PER DESTINATION =====
     const activityTags = {
       'big-island-hawaii':         ['beach','snorkel','wildlife','hiking','culture','boats','food'],
@@ -612,7 +670,7 @@
             <div class="card-body">
               <div class="card-name">${d.name}</div>
               <div class="card-tagline">${d.tagline || ''}</div>
-              <div class="card-tags">${tags.map(t => `<span class="card-tag">${actLabels[t] || t}</span>`).join('')}</div>
+              <div class="card-tags">${regionTags[d.id] ? `<span class="card-tag" style="background:var(--ocean-light);color:var(--ocean-dark)">${regionLabels[regionTags[d.id]] || regionTags[d.id]}</span>` : ''}${tags.map(t => `<span class="card-tag">${actLabels[t] || t}</span>`).join('')}</div>
               <div class="card-stats">
                 <div class="stat"><span class="stat-icon">✈️</span><span class="stat-value">${d.flightTime || ''}</span></div>
                 <div class="stat"><span class="stat-icon">🌡️</span><span class="stat-value">${d.weather ? d.weather.split(',')[0] : ''}</span></div>
@@ -749,6 +807,23 @@
       applyFiltersAndSort();
     });
 
+    // ===== REGION FILTERS =====
+    document.getElementById('regionFilters').addEventListener('click', e => {
+      if (!e.target.classList.contains('act-btn')) return;
+      const region = e.target.dataset.region;
+      if (activeRegionFilter === region) {
+        // Deselect
+        activeRegionFilter = null;
+        e.target.classList.remove('active');
+      } else {
+        // Select new region (only one at a time)
+        document.querySelectorAll('#regionFilters .act-btn').forEach(b => b.classList.remove('active'));
+        e.target.classList.add('active');
+        activeRegionFilter = region;
+      }
+      applyFiltersAndSort();
+    });
+
     // ===== ACTIVITY FILTERS =====
     document.getElementById('actFilters').addEventListener('click', e => {
       if (!e.target.classList.contains('act-btn')) return;
@@ -779,6 +854,11 @@
       let filtered = tier === 'all' ? [...allDestinations]
         : tier === 'PH' ? allDestinations.filter(d => d.tier === 'PH' || d.tier === 'B-')
         : allDestinations.filter(d => d.tier === tier);
+
+      // Region filter
+      if (activeRegionFilter) {
+        filtered = filtered.filter(d => regionTags[d.id] === activeRegionFilter);
+      }
 
       // Activity filter: destination must have ALL selected activities
       if (activeActFilters.size > 0) {
@@ -1001,6 +1081,11 @@
         icon: '⭐',
         title: 'Tier Rankings',
         text: 'Destinations are ranked into tiers based on overall fit:<br><br><strong style="color:#FFA500">S-Tier</strong> — Best overall (easy travel, great for all ages)<br><strong style="color:#0077B6">A-Tier</strong> — Excellent with one tradeoff<br><strong style="color:#7B68EE">B-Tier</strong> — Strong but notable compromises<br><strong style="color:#6c757d">C-Tier</strong> — Worth considering, challenging logistics<br><strong style="color:#52B788">🇵🇭 Philippines</strong> — Private islands (monsoon risk in July)',
+      },
+      {
+        icon: '🗺️',
+        title: 'Region Filters',
+        text: 'Tap a <strong>region</strong> to show only destinations in that area — Hawaii, Europe, Scandinavia, Asia, and more. Only one region at a time. Tap again to deselect.',
       },
       {
         icon: '🏖️',
