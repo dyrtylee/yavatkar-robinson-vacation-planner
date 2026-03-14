@@ -649,7 +649,7 @@
     // ===== RENDER GRID =====
     function renderGrid(destinations) {
       const grid = document.getElementById('destGrid');
-      document.getElementById('resultsCount').textContent = `Showing ${destinations.length} destination${destinations.length !== 1 ? 's' : ''}`;
+      document.getElementById('resultsCount').textContent = 'Showing ' + destinations.length + ' destination' + (destinations.length !== 1 ? 's' : '');
 
       if (!destinations.length) {
         grid.innerHTML = '<div class="no-results"><h3>No destinations match those filters</h3><p>Try removing an activity filter or changing the tier</p></div>';
@@ -662,35 +662,30 @@
         const tierLabel = (d.tier === 'PH' || d.tier === 'B-') ? '🇵🇭 Philippines' : d.tier + '-Tier';
         const topScores = Object.entries(d.scores || {}).filter(([k]) => k !== 'total').slice(0, 5);
         const tags = activityTags[d.id] || [];
+        const region = regionTags[d.id];
+        const regionHtml = region ? '<span class="card-tag" style="background:var(--ocean-light);color:var(--ocean-dark)">' + (regionLabels[region] || region) + '</span>' : '';
+        const tagsHtml = tags.map(t => '<span class="card-tag">' + (actLabels[t] || t) + '</span>').join('');
 
-        return `
-          <div class="dest-card" onclick="openModal('${d.id}')">
-            <span class="card-tier tier-${tierClass}">${tierLabel}</span>
-            <div class="card-hero ${theme[0]}">${theme[1]}</div>
-            <div class="card-body">
-              <div class="card-name">${d.name}</div>
-              <div class="card-tagline">${d.tagline || ''}</div>
-              <div class="card-tags">${(function(){ const r = regionTags[d.id]; return r ? '<span class="card-tag" style="background:var(--ocean-light);color:var(--ocean-dark)">' + (regionLabels[r] || r) + '</span>' : ''; })()}${tags.map(t => '<span class="card-tag">' + (actLabels[t] || t) + '</span>').join('')}</div>
-              <div class="card-stats">
-                <div class="stat"><span class="stat-icon">✈️</span><span class="stat-value">${d.flightTime || ''}</span></div>
-                <div class="stat"><span class="stat-icon">🌡️</span><span class="stat-value">${d.weather ? d.weather.split(',')[0] : ''}</span></div>
-                <div class="stat"><span class="stat-icon">🦈</span><span class="stat-value">${d.scores?.wildlife || 0}/10</span></div>
-                <div class="stat"><span class="stat-icon">✨</span><span class="stat-value">${d.scores?.kidMagic || 0}/10</span></div>
-              </div>
-              <div class="card-scores">
-                ${topScores.map(([k, v]) => `
-                  <div class="score-bar" title="${k}: ${v}/10">
-                    <div class="score-fill" style="width:${v * 10}%;background:${scoreColors[k] || '#0077B6'}"></div>
-                  </div>
-                `).join('')}
-              </div>
-              <div class="card-footer">
-                <span class="card-cost">${d.estimatedCost || ''}</span>
-                <span class="card-score-total">${d.scores?.total || 0}</span>
-              </div>
-            </div>
-          </div>
-        `;
+        return '<div class="dest-card" onclick="openModal(\'' + d.id + '\')">'
+          + '<span class="card-tier tier-' + tierClass + '">' + tierLabel + '</span>'
+          + '<div class="card-hero ' + theme[0] + '">' + theme[1] + '</div>'
+          + '<div class="card-body">'
+          + '<div class="card-name">' + d.name + '</div>'
+          + '<div class="card-tagline">' + (d.tagline || '') + '</div>'
+          + '<div class="card-tags">' + regionHtml + tagsHtml + '</div>'
+          + '<div class="card-stats">'
+          + '<div class="stat"><span class="stat-icon">✈️</span><span class="stat-value">' + (d.flightTime || '') + '</span></div>'
+          + '<div class="stat"><span class="stat-icon">🌡️</span><span class="stat-value">' + (d.weather ? d.weather.split(',')[0] : '') + '</span></div>'
+          + '<div class="stat"><span class="stat-icon">🦈</span><span class="stat-value">' + (d.scores?.wildlife || 0) + '/10</span></div>'
+          + '<div class="stat"><span class="stat-icon">✨</span><span class="stat-value">' + (d.scores?.kidMagic || 0) + '/10</span></div>'
+          + '</div>'
+          + '<div class="card-scores">'
+          + topScores.map(([k, v]) => '<div class="score-bar" title="' + k + ': ' + v + '/10"><div class="score-fill" style="width:' + (v * 10) + '%;background:' + (scoreColors[k] || '#0077B6') + '"></div></div>').join('')
+          + '</div>'
+          + '<div class="card-footer">'
+          + '<span class="card-cost">' + (d.estimatedCost || '') + '</span>'
+          + '<span class="card-score-total">' + (d.scores?.total || 0) + '</span>'
+          + '</div></div></div>';
       }).join('');
     }
 
