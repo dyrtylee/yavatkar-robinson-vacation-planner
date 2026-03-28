@@ -17,7 +17,7 @@
       "safety": 10,
       "total": 93
     },
-    "estimatedCost": "$55K–70K",
+    "estimatedCost": "",
     "weather": "75–85°F, Sunny with brief tropical showers",
     "flightTime": "~5h 30m",
     "flights": {
@@ -544,7 +544,7 @@
       "activities": "$3,800 (Na Pali boat tour ($200/pp x4 adults + $120/child, ~$920), Allerton Garden ($60/pp x4 adults, ~$240), Kauai Backcountry tubing ($140/pp x3, ~$420), kayak trip ($100/pp x3, ~$300), helicopter tour ($350/pp x2, ~$700), luau ($150/adult x4 + $80/child, ~$680), Kilauea Lighthouse ($10/pp, ~$40), misc)",
       "food": "$3,600 (Approx $350–450/day for 7 people at resort and local restaurants x 9 days)",
       "transfers": "",
-      "total": "$55K–70K"
+      "total": ""
     }
   },
   {
@@ -4267,6 +4267,600 @@
       "food": "$5,500",
       "transfers": "$1,500",
       "total": "$34K–$41K"
+    }
+  },
+  {
+    "id": "aruba",
+    "name": "Aruba",
+    "tier": "A",
+    "tagline": "One Happy Island — turquoise water, wild flamingos & trade-wind breezes outside the hurricane belt",
+    "heroEmoji": "🦩",
+    "scores": {
+      "wildlife": 6,
+      "kidMagic": 9,
+      "food": 8,
+      "travelEase": 8,
+      "weatherFit": 7,
+      "toddlerSafe": 10,
+      "grandparent": 9,
+      "luxury": 9,
+      "safety": 10,
+      "total": 86
+    },
+    "estimatedCost": "$33K–$42K",
+    "weather": "85–90°F, sunny and dry — outside the hurricane belt, constant trade winds keep it comfortable",
+    "flightTime": "~6 hrs (one connection)",
+    "flights": {
+      "outbound": {
+        "airline": "American Airlines",
+        "route": "LAX → MIA → AUA (Queen Beatrix International)",
+        "class": "First / Business",
+        "duration": "4h 45m + 2h 45m (one stop via Miami)",
+        "depart": "June 27, 7:30 AM PDT",
+        "arrive": "June 27, 7:45 PM AST"
+      },
+      "return": {
+        "airline": "American Airlines",
+        "route": "AUA → MIA → LAX",
+        "class": "First / Business",
+        "duration": "3h + 5h 30m (one stop via Miami)",
+        "depart": "July 5, 10:00 AM AST",
+        "arrive": "July 5, 5:00 PM PDT"
+      }
+    },
+    "hotel": {
+      "name": "The Ritz-Carlton, Aruba",
+      "url": "https://www.ritzcarlton.com/en/hotels/auarz-the-ritz-carlton-aruba",
+      "rooms": [
+        {
+          "name": "Oceanfront Two-Bedroom Suite",
+          "for": "Adults + kids — separate living area, kitchenette, two bathrooms, cribs and rollaway beds pre-arranged",
+          "rate": "$2,800/night"
+        },
+        {
+          "name": "Deluxe Ocean-View Room (Club Level)",
+          "for": "Grandparents — Club Lounge access with complimentary breakfast and evening cocktails, quieter floor",
+          "rate": "$1,200/night"
+        }
+      ],
+      "highlights": [
+        "Direct access to Palm Beach — calm, shallow water perfect for toddlers",
+        "Ritz Kids program (ages 4–12) with nature activities and crafts",
+        "Two-level resort pool with lazy river, splash pad, and hot tub",
+        "On-site casino for adults-only evening entertainment",
+        "Spa & fitness center — great for grandparent relaxation days",
+        "In-room cribs, bottle warmers, and baby amenities on request",
+        "Multiple dining options including BLT Steak and poolside café"
+      ]
+    },
+    "days": [
+      {
+        "day": 1,
+        "title": "Arrival — Welcome to One Happy Island",
+        "schedule": [
+          {
+            "time": "7:30 AM",
+            "activity": "Depart LAX on American Airlines First Class to Miami",
+            "who": "All",
+            "icon": "✈️"
+          },
+          {
+            "time": "3:45 PM ET",
+            "activity": "Arrive Miami, connect to Aruba flight — kids stretch legs in terminal play area",
+            "who": "All",
+            "icon": "✈️"
+          },
+          {
+            "time": "7:45 PM AST",
+            "activity": "Arrive Queen Beatrix International Airport, private transfer to Ritz-Carlton (15 min)",
+            "who": "All",
+            "icon": "🚐"
+          },
+          {
+            "time": "8:15 PM",
+            "activity": "Check in, settle kids into suites — cribs and toddler beds pre-arranged",
+            "who": "All",
+            "icon": "🏨"
+          },
+          {
+            "time": "8:45 PM",
+            "activity": "Light dinner at the resort's poolside café — kids' menu, casual and quick after a long travel day",
+            "who": "All",
+            "icon": "🍕"
+          },
+          {
+            "time": "9:30 PM",
+            "activity": "Bedtime — everyone rest up, trade winds through the balcony doors",
+            "who": "All",
+            "icon": "😴"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Palm Beach & Resort Day",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Breakfast at the resort — fresh tropical fruit, pancakes for the kids, Aruban coffee",
+            "who": "All",
+            "icon": "🥞"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Palm Beach morning — turquoise calm water, white sand, toddlers splash in the shallows while grandparents set up under a palapa",
+            "who": "All",
+            "icon": "🏖️"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Resort pool time — lazy river, splash pad for the kids, adults rotate for cocktails at the swim-up bar",
+            "who": "All",
+            "icon": "🏊"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at BLT Steak (resort) — burgers, chicken tenders for kids, fresh catch for adults",
+            "who": "All",
+            "icon": "🍔"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — toddlers and baby nap in the suite, grandparents rest or visit the spa",
+            "who": "All",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Beach walk toward the high-rise strip — 5-year-old hunts for shells and hermit crabs along the shore",
+            "who": "All",
+            "icon": "🐚"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Sunset happy hour at the resort's beach bar — mocktails for kids, Balashi beers for adults",
+            "who": "All",
+            "icon": "🌅"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner at Barefoot Restaurant — toes-in-the-sand dining, fresh seafood, romantic and family-friendly at the same time",
+            "who": "All",
+            "icon": "🦐"
+          },
+          {
+            "time": "8:30 PM",
+            "activity": "Bedtime routine at the resort — bath and books, kids asleep by 9, adults try the casino",
+            "who": "All",
+            "icon": "🎰"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Flamingo Beach & Renaissance Island",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Breakfast at the resort",
+            "who": "All",
+            "icon": "🍳"
+          },
+          {
+            "time": "9:15 AM",
+            "activity": "Drive to Renaissance Marina in Oranjestad (10 min), take private water taxi to Renaissance Island",
+            "who": "All",
+            "icon": "🚤"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "Flamingo Beach — wild pink flamingos walk right up to you! Hand-feed them and take photos. The 5-year-old will be mesmerized. Baby-friendly calm lagoon area",
+            "who": "All",
+            "icon": "🦩"
+          },
+          {
+            "time": "11:30 AM",
+            "activity": "Explore Iguana Beach (the family-friendly side) — iguanas sunbathe on the rocks, shallow warm water for toddlers",
+            "who": "All",
+            "icon": "🦎"
+          },
+          {
+            "time": "12:30 PM",
+            "activity": "Lunch on Renaissance Island — casual beach grill with island favorites",
+            "who": "All",
+            "icon": "🍗"
+          },
+          {
+            "time": "1:15 PM",
+            "activity": "Water taxi back to Oranjestad, return to resort for nap time",
+            "who": "All",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Pool time at the resort — kids splash, grandparents lounge with books",
+            "who": "All",
+            "icon": "🏊"
+          },
+          {
+            "time": "5:30 PM",
+            "activity": "Short drive to California Lighthouse for sunset — panoramic views of the entire island, photo-worthy spot",
+            "who": "All",
+            "icon": "🌅"
+          },
+          {
+            "time": "7:00 PM",
+            "activity": "Dinner at Papiamento — historic Aruban cunucu house with courtyard dining, local and Dutch-Caribbean cuisine",
+            "who": "All",
+            "icon": "🍽️"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Baby Beach & Philip's Animal Garden",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Breakfast at the resort, pack snacks and sunscreen for a south-end adventure",
+            "who": "All",
+            "icon": "🍳"
+          },
+          {
+            "time": "9:15 AM",
+            "activity": "Drive to Baby Beach (30 min south) — knee-deep crystal-clear water stretches out for hundreds of feet, like a giant natural kiddie pool. All 3 kids can splash safely",
+            "who": "All",
+            "icon": "🏖️"
+          },
+          {
+            "time": "11:30 AM",
+            "activity": "Snorkel the reef at the far end of Baby Beach — parents take turns with the 5-year-old while grandparents watch toddlers in the shallows",
+            "who": "Adults / 5yo",
+            "icon": "🤿"
+          },
+          {
+            "time": "12:15 PM",
+            "activity": "Lunch at a local fish shack near Baby Beach — fresh grilled mahi-mahi, Dutch croquettes, cold drinks",
+            "who": "All",
+            "icon": "🐟"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Drive back toward resort, nap time in the car and continue at the hotel",
+            "who": "All",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Philip's Animal Garden — a rescue zoo with monkeys, exotic birds, kangaroos, ostriches, coatimundis, and more. The 5-year-old will absolutely love this. Interactive and hands-on",
+            "who": "All",
+            "icon": "🐒",
+            "url": "https://www.philipsanimalgarden.com"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Back to resort for pool cool-down and showers",
+            "who": "All",
+            "icon": "🏊"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner at The Old Cunucu House — authentic Aruban food in a 150-year-old cottage, goat stew, fresh fish, and plantains",
+            "who": "All",
+            "icon": "🏠"
+          },
+          {
+            "time": "8:30 PM",
+            "activity": "Bedtime — kids down, adults stroll the resort grounds or visit the casino",
+            "who": "All",
+            "icon": "😴"
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Arikok National Park & Natural Pool",
+        "schedule": [
+          {
+            "time": "7:30 AM",
+            "activity": "Early breakfast — fuel up for an adventure morning",
+            "who": "All",
+            "icon": "🍳"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "Drive to Arikok National Park (20 min) — covers nearly 20% of the island, dramatic desert landscapes, giant boulders, and cactus forests",
+            "who": "All",
+            "icon": "🏜️"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Guided nature walk — spot wild donkeys, iguanas, whiptail lizards, and Aruban burrowing owls (shoco). Visit Fontein Cave to see ancient Arawak cave paintings",
+            "who": "All",
+            "icon": "🦎"
+          },
+          {
+            "time": "10:30 AM",
+            "activity": "Natural Pool (Conchi) viewpoint — the dramatic rock-enclosed ocean pool. With little kids, enjoy the views and wade at the calmer approaches rather than the deep pool itself",
+            "who": "All",
+            "icon": "🌊"
+          },
+          {
+            "time": "11:30 AM",
+            "activity": "Drive to Boca Prins — wild windward coast, dramatic dunes, great for photos",
+            "who": "All",
+            "icon": "📸"
+          },
+          {
+            "time": "12:30 PM",
+            "activity": "Lunch at resort, then nap time — everyone recharges after a big morning",
+            "who": "All",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Butterfly Farm — hundreds of tropical butterflies land on you in an enclosed garden. Magical for all ages, especially the toddler and 5-year-old",
+            "who": "All",
+            "icon": "🦋",
+            "url": "https://www.thebutterflyfarm.com"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Eagle Beach — often ranked #1 beach in the Caribbean. Iconic fofoti (divi-divi) trees, wide white sand, calm turquoise water. Perfect late-afternoon swim",
+            "who": "All",
+            "icon": "🏖️"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner at Screaming Eagle — upscale, creative fusion cuisine, bed-style cabana seating (reserve early, it's a unique experience)",
+            "who": "Adults / grandparents (consider sitter)",
+            "icon": "🍷"
+          },
+          {
+            "time": "8:30 PM",
+            "activity": "Quiet evening at the resort — stargazing from the balcony, kids to bed",
+            "who": "All",
+            "icon": "🌙"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "title": "De Palm Island Water Park",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Breakfast at the resort",
+            "who": "All",
+            "icon": "🥞"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Ferry to De Palm Island (all-inclusive private island) — water slides, snorkeling lagoon, banana boats, and the famous Sea Trek underwater helmet walk",
+            "who": "All",
+            "icon": "🏝️",
+            "url": "https://www.depalmisland.com"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "Kids' water park — slides and splash zones perfect for all ages, shallow wading pools for toddlers and baby",
+            "who": "Kids + supervising adults",
+            "icon": "🎢"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Snorkeling in the lagoon — colorful reef fish, sea stars. 5-year-old tries a mask and snorkel for the first time in calm, protected water",
+            "who": "Adults / 5yo",
+            "icon": "🤿"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "All-inclusive lunch on the island — BBQ, salads, tropical drinks included",
+            "who": "All",
+            "icon": "🍖"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — find a shady palapa, baby and toddler nap in stroller while grandparents relax on beach loungers",
+            "who": "All",
+            "icon": "😴"
+          },
+          {
+            "time": "3:00 PM",
+            "activity": "Sea Trek underwater helmet walk (adults) — walk on the ocean floor and see fish and coral without getting your hair wet. Grandparent-friendly, no swimming required",
+            "who": "Adults / grandparents",
+            "icon": "🪸"
+          },
+          {
+            "time": "4:30 PM",
+            "activity": "Ferry back to mainland, return to resort for showers",
+            "who": "All",
+            "icon": "🚤"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner at Atardi (Ritz-Carlton) — beachfront sunset dining, great steaks and seafood, kids' menu",
+            "who": "All",
+            "icon": "🥩"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Submarine & Oranjestad Exploration",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Breakfast at the resort",
+            "who": "All",
+            "icon": "🍳"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Atlantis Submarines tour — descend 130 feet in a real submarine! See shipwrecks, tropical fish, and coral reefs through large portholes. The 5-year-old will think this is the coolest thing ever. Air-conditioned and smooth — great for the grandparent afraid of turbulence (no waves felt underwater!)",
+            "who": "All (toddlers on laps)",
+            "icon": "🚢",
+            "url": "https://www.atlantissubmarines.com/aruba"
+          },
+          {
+            "time": "11:30 AM",
+            "activity": "Stroll downtown Oranjestad — colorful Dutch colonial architecture, murals, the Renaissance Marketplace",
+            "who": "All",
+            "icon": "🏘️"
+          },
+          {
+            "time": "12:15 PM",
+            "activity": "Lunch at a local spot in Oranjestad — try keshi yena (stuffed cheese), pastechi (empanadas), and fresh fruit shakes",
+            "who": "All",
+            "icon": "🥙"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — back to the resort, kids nap, grandparents lounge by the pool",
+            "who": "All",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Mangel Halto snorkeling — hidden mangrove lagoon with calm, crystal-clear water teeming with reef fish. Shallow entry, great for the 5-year-old. Toddlers wade and watch",
+            "who": "All",
+            "icon": "🤿"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Return to resort, pool time and showers",
+            "who": "All",
+            "icon": "🏊"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Sunset catamaran cruise — Jolly Pirates or Red Sail Sports. Open bar for adults, rope swings, calm sailing along the coast. Toddlers love watching the water from the net",
+            "who": "All",
+            "icon": "⛵"
+          },
+          {
+            "time": "8:30 PM",
+            "activity": "Light snacks at resort, bedtime",
+            "who": "All",
+            "icon": "😴"
+          }
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Eagle Beach & Farewell Fun",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Breakfast at the resort — last full day, soak it in",
+            "who": "All",
+            "icon": "🍳"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Eagle Beach morning — build sandcastles under the iconic divi-divi trees, wade in the gentle turquoise surf. Photo session with the whole family",
+            "who": "All",
+            "icon": "🏖️"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Boca Catalina snorkeling — small sheltered cove with unbelievably clear water, abundant parrotfish and sea turtles. 5-year-old's last big snorkel adventure",
+            "who": "Adults / 5yo",
+            "icon": "🐢"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at a beachside fish shack — grouper sandwiches, fried plantains, cold Balashi beers",
+            "who": "All",
+            "icon": "🐟"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — last afternoon rest, grandparents get a final spa treatment",
+            "who": "All",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Resort pool and beach — free play, lazy river, let the kids run wild one last time",
+            "who": "All",
+            "icon": "🏊"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Pack suitcases, organize souvenirs — kids help pick out their favorite shells and trinkets",
+            "who": "All",
+            "icon": "🧳"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Farewell dinner at Barefoot Restaurant again or Papiamento — celebrate the trip, toast to One Happy Island",
+            "who": "All",
+            "icon": "🥂"
+          },
+          {
+            "time": "8:30 PM",
+            "activity": "Final sunset from the hotel balcony, early bedtime for early-morning flight",
+            "who": "All",
+            "icon": "🌅"
+          }
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Departure — Dushi Aruba, See You Next Time",
+        "schedule": [
+          {
+            "time": "7:00 AM",
+            "activity": "Early breakfast at the resort, final check of rooms",
+            "who": "All",
+            "icon": "🍳"
+          },
+          {
+            "time": "8:00 AM",
+            "activity": "Private transfer to Queen Beatrix International Airport (15 min)",
+            "who": "All",
+            "icon": "🚐"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "Depart Aruba on American Airlines First Class to Miami — smooth flight, movies and snacks for the kids",
+            "who": "All",
+            "icon": "✈️"
+          },
+          {
+            "time": "12:45 PM ET",
+            "activity": "Arrive Miami, connect to LAX flight — lunch in the Admirals Club lounge",
+            "who": "All",
+            "icon": "✈️"
+          },
+          {
+            "time": "5:00 PM PDT",
+            "activity": "Arrive LAX — home sweet home, sunburned and full of flamingo memories",
+            "who": "All",
+            "icon": "🏠"
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Aruba is outside the hurricane belt — virtually no risk of tropical storms in June/July, making it one of the safest Caribbean picks for this time of year",
+      "The constant trade winds (15-20 mph) make 85-90°F feel very comfortable and keep mosquitoes at bay",
+      "Baby Beach is the #1 must-do for families with toddlers — the water is knee-deep for hundreds of feet and bathtub-warm",
+      "Flamingo Beach on Renaissance Island requires a day pass or Renaissance hotel booking — book the VIP cabana in advance for the family side",
+      "The submarine tour is fully air-conditioned and you don't feel any ocean waves once submerged — perfect for the grandparent who's afraid of turbulence",
+      "Aruba uses the Aruban florin but US dollars are accepted literally everywhere — no need to exchange currency",
+      "Tap water is safe to drink (desalinated) — one of the few Caribbean islands where this is the case",
+      "Rent a car for the Baby Beach and Arikok days — everything else is a short taxi or hotel shuttle ride",
+      "Philip's Animal Garden is a local gem that most tourists miss — the 5-year-old will talk about it for months"
+    ],
+    "costBreakdown": {
+      "flights": "$15,500 (6 seats × ~$2,500 first/business + $250 lap infant)",
+      "hotel": "$32,000 (8 nights × 2-bedroom suite $2,800 + Club Level room $1,200)",
+      "activities": "$3,500 (De Palm Island, submarine, catamaran, Flamingo Beach passes, Butterfly Farm, Philip's Animal Garden)",
+      "food": "$4,500",
+      "transfers": "$800 (airport transfers, car rental 2 days, water taxis)",
+      "total": "$33K–$42K"
     }
   },
   {
