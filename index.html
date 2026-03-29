@@ -169,6 +169,7 @@
     .tier-B { background: linear-gradient(135deg, var(--purple), #5B4FCF); }
     .tier-C { background: linear-gradient(135deg, #6c757d, #495057); }
     .tier-PH { background: linear-gradient(135deg, var(--green), var(--green-dark)); }
+    .tier-FIJI { background: linear-gradient(135deg, #00B4D8, #0077B6); }
 
     .card-hero { height: 80px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
     .card-hero.beach { background: linear-gradient(135deg, #00B4D8, #48CAE4); }
@@ -384,6 +385,7 @@
       <button class="filter-btn" data-filter="B">🟣 B-Tier</button>
       <button class="filter-btn" data-filter="C">⚪ C-Tier</button>
       <button class="filter-btn" data-filter="PH">🇵🇭 Philippines</button>
+      <button class="filter-btn" data-filter="FIJI">🇫🇯 Fiji Deep Dive</button>
       <select class="sort-select" id="sortSelect">
         <option value="score">Sort: Best Score</option>
         <option value="cost-low">Sort: Lowest Cost</option>
@@ -460,6 +462,8 @@
       'katmai-alaska': 'usa-canada', 'banff': 'usa-canada', 'vancouver-island': 'usa-canada',
       'haida-gwaii-canada': 'usa-canada', 'quebec-charlevoix': 'usa-canada',
       'moorea': 'pacific-islands', 'bora-bora': 'pacific-islands', 'fiji': 'pacific-islands',
+      'fiji-kokomo': 'pacific-islands', 'fiji-six-senses': 'pacific-islands', 'fiji-nanuku': 'pacific-islands',
+      'fiji-vomo': 'pacific-islands', 'fiji-laucala': 'pacific-islands',
       'maldives': 'indian-ocean', 'seychelles': 'indian-ocean', 'mauritius': 'indian-ocean', 'sri-lanka': 'indian-ocean',
       'iceland-golden-circle': 'scandinavia', 'norwegian-fjords': 'scandinavia',
       'lofoten-islands-norway': 'scandinavia', 'faroe-islands': 'scandinavia',
@@ -507,6 +511,11 @@
       'swiss-alps':                ['hiking','lakes','culture','food','boats'],
       'riviera-maya':              ['beach','sharks','snorkel','culture','food'],
       'fiji':                      ['beach','snorkel','wildlife','boats'],
+      'fiji-kokomo':               ['beach','snorkel','wildlife','boats'],
+      'fiji-six-senses':           ['beach','snorkel','wildlife','boats','food'],
+      'fiji-nanuku':               ['beach','snorkel','wildlife','boats','hiking','culture'],
+      'fiji-vomo':                 ['beach','snorkel','wildlife','boats','culture'],
+      'fiji-laucala':              ['beach','snorkel','wildlife','boats'],
       'austria':                   ['hiking','lakes','culture','food'],
       'hokkaido':                  ['wildlife','hiking','food','culture'],
       'slovenia-lake-bled':        ['lakes','hiking','culture','food'],
@@ -572,6 +581,8 @@
       'kauai-hawaii': ['beach', '🌿'], 'moorea': ['island', '🐋'], 'bora-bora': ['island', '🏝️'],
       'costa-rica': ['tropical', '🦥'], 'banff': ['mountain', '🏔️'], 'vancouver-island': ['mountain', '🐻'],
       'swiss-alps': ['mountain', '🏔️'], 'riviera-maya': ['island', '🐢'], 'fiji': ['island', '🐠'],
+      'fiji-kokomo': ['island', '🐠'], 'fiji-six-senses': ['island', '🧘'], 'fiji-nanuku': ['island', '🌊'],
+      'fiji-vomo': ['island', '👶'], 'fiji-laucala': ['island', '🔒'],
       'austria': ['mountain', '🏰'], 'hokkaido': ['mountain', '🦌'], 'slovenia-lake-bled': ['mountain', '🏞️'],
       'copenhagen-denmark': ['europe', '🧱'], 'iceland-golden-circle': ['arctic', '🐋'],
       'galapagos-ecuador': ['island', '🐢'], 'italian-lakes-como-garda': ['europe', '🚤'],
@@ -661,7 +672,7 @@
       grid.innerHTML = destinations.map(d => {
         const theme = heroThemes[d.id] || ['beach', d.heroEmoji || '🌍'];
         const tierClass = (d.tier === 'PH' || d.tier === 'B-') ? 'PH' : d.tier;
-        const tierLabel = (d.tier === 'PH' || d.tier === 'B-') ? '🇵🇭 Philippines' : d.tier + '-Tier';
+        const tierLabel = (d.tier === 'PH' || d.tier === 'B-') ? '🇵🇭 Philippines' : d.tier === 'FIJI' ? '🇫🇯 Fiji' : d.tier + '-Tier';
         const topScores = Object.entries(d.scores || {}).filter(([k]) => k !== 'total').slice(0, 5);
         const tags = activityTags[d.id] || [];
         const region = regionTags[d.id];
@@ -850,6 +861,7 @@
 
       let filtered = tier === 'all' ? [...allDestinations]
         : tier === 'PH' ? allDestinations.filter(d => d.tier === 'PH' || d.tier === 'B-')
+        : tier === 'FIJI' ? allDestinations.filter(d => d.tier === 'FIJI')
         : allDestinations.filter(d => d.tier === tier);
 
       // Region filter
@@ -894,6 +906,8 @@
       'kauai-hawaii': [22.08, -159.32], 'moorea': [-17.53, -149.83], 'bora-bora': [-16.50, -151.74],
       'costa-rica': [10.63, -85.69], 'banff': [51.18, -115.57], 'vancouver-island': [49.15, -125.90],
       'swiss-alps': [46.95, -8.39], 'riviera-maya': [20.63, -87.08], 'fiji': [-17.75, 177.95],
+      'fiji-kokomo': [-19.08, 178.51], 'fiji-six-senses': [-17.77, 177.19],
+      'fiji-nanuku': [-18.22, 177.98], 'fiji-vomo': [-17.62, 177.22], 'fiji-laucala': [-16.55, -179.70],
       'austria': [47.77, 13.29], 'hokkaido': [42.92, 141.35], 'slovenia-lake-bled': [46.36, 14.09],
       'copenhagen-denmark': [55.68, 12.57], 'iceland-golden-circle': [64.15, -21.94],
       'galapagos-ecuador': [-0.75, -90.30], 'italian-lakes-como-garda': [45.99, 9.26],

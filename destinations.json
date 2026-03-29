@@ -1652,6 +1652,1171 @@
     }
   },
   {
+    "id": "fiji-nanuku",
+    "name": "Fiji — Nanuku Auberge Resort",
+    "tier": "FIJI",
+    "tagline": "One nanny per child, no boats required, and world-class Beqa Lagoon — the practical luxury pick for a family with 3 tiny kids",
+    "heroEmoji": "🏝️",
+    "scores": {
+      "wildlife": 7,
+      "kidMagic": 9,
+      "food": 8,
+      "travelEase": 7,
+      "weatherFit": 10,
+      "toddlerSafe": 10,
+      "grandparent": 9,
+      "luxury": 9,
+      "safety": 9,
+      "total": 88
+    },
+    "estimatedCost": "$65K–$85K",
+    "weather": "63–79°F, dry/cool season, low humidity",
+    "flightTime": "~11.5 hrs nonstop",
+    "flights": {
+      "outbound": {
+        "airline": "Fiji Airways",
+        "route": "LAX → NAN (Nadi)",
+        "class": "Business Class",
+        "duration": "~11.5 hrs",
+        "depart": "Jun 27, 10:30 PM PDT",
+        "arrive": "Jun 29, 5:00 AM FJT (+2 days, crosses date line)"
+      },
+      "return": {
+        "airline": "Fiji Airways",
+        "route": "NAN (Nadi) → LAX",
+        "class": "Business Class",
+        "duration": "~10.5 hrs",
+        "depart": "Jul 5, 9:15 PM FJT",
+        "arrive": "Jul 5, 1:45 PM PDT (same calendar day — gain a day crossing date line)"
+      }
+    },
+    "hotel": {
+      "name": "Nanuku Auberge Resort",
+      "url": "https://nanukuresort.com",
+      "rooms": [
+        {
+          "name": "3-Bedroom Grand Residence",
+          "for": "2 adults + 3 children — private pool, beachfront, full kitchen",
+          "rate": "$2,500–$3,500/night"
+        },
+        {
+          "name": "Adjacent Villa (1-Bedroom)",
+          "for": "2 grandparents — connected to Grand Residence, private but close",
+          "rate": "$1,200–$1,800/night"
+        }
+      ],
+      "highlights": [
+        "ONE NANNY PER CHILD under 8 — included! Three dedicated nannies for your three kids",
+        "On the main island of Viti Levu — 2.5 hr scenic drive from Nadi, NO boats or seaplanes needed",
+        "Beqa Lagoon access — world-class snorkeling and diving minutes away",
+        "All-inclusive option available (meals + activities)",
+        "Full kitchen in residence for picky eaters and midnight bottle prep",
+        "Access to local Fijian villages, markets, and authentic cultural experiences",
+        "Private chef available for in-villa dining",
+        "Medical facilities on the main island — hospital reachable within 30 minutes"
+      ]
+    },
+    "days": [
+      {
+        "day": 1,
+        "title": "Travel Day — Red-Eye to Paradise",
+        "schedule": [
+          {
+            "time": "7:00 PM",
+            "activity": "Depart for LAX — allow extra time for international check-in with 3 small children",
+            "who": "All",
+            "icon": "🚗"
+          },
+          {
+            "time": "8:30 PM",
+            "activity": "Settle into Fiji Airways business class lounge — kids change into pajamas",
+            "who": "All",
+            "icon": "✈️"
+          },
+          {
+            "time": "10:30 PM",
+            "activity": "Fiji Airways FJ811 departs LAX — lie-flat seats, bassinet for 1yo",
+            "who": "All",
+            "icon": "🌙"
+          },
+          {
+            "time": "11:30 PM",
+            "activity": "Kids asleep, adults relax",
+            "who": "Adults + Grandparents",
+            "icon": "🍾"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Arrival Day — Scenic Drive to Nanuku",
+        "schedule": [
+          {
+            "time": "5:00 AM FJT",
+            "activity": "Arrive Nadi International Airport — June 29. Clear immigration and customs.",
+            "who": "All",
+            "icon": "✈️"
+          },
+          {
+            "time": "6:00 AM",
+            "activity": "Meet Nanuku's private driver — luxury SUVs with pre-installed car seats. Breakfast box provided for the drive.",
+            "who": "All",
+            "icon": "🚙"
+          },
+          {
+            "time": "6:30 AM",
+            "activity": "Begin 2.5-hour scenic drive along the Coral Coast — stop at a roadside fruit stand, kids nap in the car. No boats, no turbulence, no stress.",
+            "who": "All",
+            "icon": "🛣️",
+            "url": "https://nanukuresort.com/getting-here/"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Arrive Nanuku Auberge Resort — traditional Fijian welcome with serenading warriors and flower garlands. Meet your THREE nannies (one per child!).",
+            "who": "All",
+            "icon": "🌺"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "Settle into Grand Residence + grandparents' adjacent villa. Set up cribs, unpack, explore the property.",
+            "who": "All",
+            "icon": "🏠"
+          },
+          {
+            "time": "11:30 AM",
+            "activity": "Late brunch at Kanavata Restaurant — fresh seafood, Fijian dishes, kid-friendly options",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — all three kids down, each with their assigned nanny. Adults collapse into pool loungers.",
+            "who": "Kids nap / Adults relax",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Gentle beach exploration — calm beachfront, shallow lagoon, perfect for tiny feet",
+            "who": "All",
+            "icon": "🏖️"
+          },
+          {
+            "time": "6:00 PM",
+            "activity": "Welcome dinner at Kanavata — Fijian tasting menu, early kids' seating with nannies",
+            "who": "All",
+            "icon": "🍽️"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Beqa Lagoon & Crab Catching",
+        "schedule": [
+          {
+            "time": "7:30 AM",
+            "activity": "Breakfast at Kanavata — eggs, tropical fruit, fresh bread from the resort bakery",
+            "who": "All",
+            "icon": "🥞"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Private boat trip to Beqa Lagoon for snorkeling — one of the world's top soft coral dive sites. Calm, shallow areas perfect for beginners.",
+            "who": "Adults + 5yo + Grandparents",
+            "icon": "🤿",
+            "url": "https://nanukuresort.com/experiences/"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Toddlers stay at the resort with their nannies — beach play, sandcastle building, splash pool",
+            "who": "2.5yo + 1yo with Nannies",
+            "icon": "🏖️"
+          },
+          {
+            "time": "11:30 AM",
+            "activity": "Return from Beqa — everyone regathers for lunch",
+            "who": "All",
+            "icon": "⛵"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at Beach Bar — grilled fish, coconut curry, fresh lemonade",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — nannies take over. Adults and grandparents enjoy the pool or spa.",
+            "who": "Kids nap / Adults relax",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Crab catching on the beach with the resort's nature guide — 5yo leads the expedition. Hermit crabs, ghost crabs, and mudcrabs.",
+            "who": "All",
+            "icon": "🦀"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Coconut husking lesson — Fijian staff teach the family to crack and shred coconuts. 5yo is fascinated. Fresh coconut water for everyone.",
+            "who": "All",
+            "icon": "🥥"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Private chef dinner at the residence — in-villa dining, Fijian BBQ on the terrace",
+            "who": "All",
+            "icon": "🔥"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Waterfall Hike & Village Visit",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Breakfast at Kanavata — fuel up for an adventure morning",
+            "who": "All",
+            "icon": "🥐"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Guided waterfall hike to a nearby cascade — easy trail through tropical forest. Carrier for 1yo, 2.5yo rides in an off-road stroller or on Dad's back.",
+            "who": "All",
+            "icon": "🌊",
+            "url": "https://nanukuresort.com/experiences/"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Swim in the freshwater pool at the base of the waterfall — adults and 5yo swim, toddlers splash at the edge with nannies",
+            "who": "All",
+            "icon": "💦"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at Kanavata — recovery meal, hearty soups and sandwiches",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — hiking tired everyone out. Nannies on duty.",
+            "who": "Kids nap / All rest",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Visit a nearby Fijian village — kava ceremony (adults sip, kids watch), meet local families, see how tapa cloth is made",
+            "who": "All",
+            "icon": "🏘️",
+            "url": "https://nanukuresort.com/experiences/"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Back at resort — kids play in the residence pool while adults watch the sunset from the deck",
+            "who": "All",
+            "icon": "🌅"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner at Kanavata — Fijian lovo feast (underground oven cooking) arranged for the family",
+            "who": "All",
+            "icon": "🍖"
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "title": "River Rafting & Spa Day",
+        "schedule": [
+          {
+            "time": "7:30 AM",
+            "activity": "Breakfast at the residence — private chef makes pancakes shaped like fish for the kids",
+            "who": "All",
+            "icon": "🥞"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Gentle river bamboo rafting — adults and grandparents float down the Navua River on bamboo rafts through a stunning gorge. Not whitewater — calm and scenic.",
+            "who": "Adults + Grandparents + 5yo",
+            "icon": "🛶"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Toddlers stay at resort with nannies — splash pool, beach time, and art activities",
+            "who": "2.5yo + 1yo with Nannies",
+            "icon": "🎨"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Return from rafting — lunch at Beach Bar. Fresh catch of the day, tropical smoothies.",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — the paddling tired out the adults too",
+            "who": "Kids nap / Adults rest",
+            "icon": "😴"
+          },
+          {
+            "time": "3:00 PM",
+            "activity": "Grandparents enjoy the resort spa — traditional Fijian bobo massage",
+            "who": "Grandparents",
+            "icon": "💆"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Adults take 5yo for a guided snorkel at the resort's house reef — calm, shallow, guided",
+            "who": "Adults + 5yo",
+            "icon": "🤿"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Family pool time — all together in the residence infinity pool. Golden hour photos.",
+            "who": "All",
+            "icon": "🏊"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner at Kanavata — seafood platter, Fijian curry, wood-fired pizza for the kids",
+            "who": "All",
+            "icon": "🍕"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Market Day & Beach Bliss",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Breakfast at the residence — relaxed morning",
+            "who": "All",
+            "icon": "☀️"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Drive to Pacific Harbour town market — fresh produce, handmade crafts, Fijian sulu fabrics. 5yo picks out a carved turtle.",
+            "who": "All",
+            "icon": "🛍️"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Stop at a local cafe for Fijian roti and curry — authentic, cheap, and delicious",
+            "who": "All",
+            "icon": "🍛"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Return to resort — lunch at Beach Bar or residence",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — nannies handle the transition. Adults read by the pool.",
+            "who": "Kids nap / Adults relax",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Extended beach afternoon — build an epic sandcastle with the 5yo, toddlers dig and splash, grandparents in beach chairs",
+            "who": "All",
+            "icon": "🏖️"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Fijian meke dance performance at the resort — warriors dance with fire, gentle enough to not scare the toddlers (mostly)",
+            "who": "All",
+            "icon": "🔥"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner at Kanavata — the chef prepares a special Fijian feast in honor of your stay",
+            "who": "All",
+            "icon": "🍽️"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Mangrove Kayak & Fishing",
+        "schedule": [
+          {
+            "time": "7:30 AM",
+            "activity": "Breakfast at Kanavata — early start for the morning paddle",
+            "who": "All",
+            "icon": "🥐"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Guided mangrove kayak tour — paddle through the mangrove channels spotting herons, kingfishers, and baby reef sharks in the shallows",
+            "who": "Adults + 5yo tandem + Grandparents",
+            "icon": "🚣"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Toddlers at resort with nannies — sensory play, beach exploration, snack time",
+            "who": "2.5yo + 1yo with Nannies",
+            "icon": "🏖️"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Return from kayaking — coconut water and fruit at the Beach Bar",
+            "who": "All",
+            "icon": "🥥"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at the residence — private chef does a sushi and sashimi spread",
+            "who": "All",
+            "icon": "🍣"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time",
+            "who": "Kids nap",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Deep-sea fishing trip — trolling for wahoo, tuna, and giant trevally off Pacific Harbour",
+            "who": "Adults + Grandpa + 5yo",
+            "icon": "🎣"
+          },
+          {
+            "time": "5:30 PM",
+            "activity": "Toddlers and Grandma enjoy the residence pool and garden — gentle evening",
+            "who": "Grandma + Toddlers + Nannies",
+            "icon": "🌴"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner featuring today's catch — the chef grills your fish at the residence BBQ. Grandpa tells the fishing story seven times.",
+            "who": "All",
+            "icon": "🐟"
+          }
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Final Full Day — The Best of Nanuku",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Last breakfast at Kanavata — order everything you loved this week",
+            "who": "All",
+            "icon": "🥞"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "One final snorkel at the house reef — 5yo finds a clownfish and names it",
+            "who": "Adults + 5yo",
+            "icon": "🤿"
+          },
+          {
+            "time": "10:30 AM",
+            "activity": "Grandparents enjoy a farewell spa treatment while nannies take all three kids for a beach adventure",
+            "who": "Grandparents at spa / Kids with Nannies",
+            "icon": "💆"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at Beach Bar — one last round of fish tacos and mango smoothies",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Final nap time — start packing while kids sleep",
+            "who": "Kids nap / Adults pack",
+            "icon": "🧳"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Family photo session on the beach — professional photographer arranged by the resort",
+            "who": "All",
+            "icon": "📸"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Farewell ceremony — nannies and staff sing traditional Fijian farewell song 'Isa Lei'. Tears guaranteed.",
+            "who": "All",
+            "icon": "🎶"
+          },
+          {
+            "time": "6:00 PM",
+            "activity": "Early light dinner at Kanavata — before tomorrow's early departure",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "7:30 PM",
+            "activity": "Kids in bed early. Adults and grandparents toast on the terrace — you made it through a 9-day trip with 3 kids under 6.",
+            "who": "Adults + Grandparents",
+            "icon": "🥂"
+          }
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Departure — Moce, Nanuku",
+        "schedule": [
+          {
+            "time": "5:30 AM",
+            "activity": "Early wake-up — breakfast boxes prepared by the resort for the road",
+            "who": "All",
+            "icon": "🌅"
+          },
+          {
+            "time": "6:00 AM",
+            "activity": "Begin 2.5-hour drive back to Nadi — kids will likely sleep in the car. Scenic Coral Coast road.",
+            "who": "All",
+            "icon": "🚙"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "Arrive Nadi — option to stop at Nadi temple or market for souvenirs",
+            "who": "All",
+            "icon": "🛍️"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch in Nadi — Nadina Authentic Fijian Restaurant or similar",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Head to Nadi airport — Fiji Airways business class lounge, showers, kids' play area",
+            "who": "All",
+            "icon": "🛋️"
+          },
+          {
+            "time": "9:15 PM",
+            "activity": "Fiji Airways FJ810 departs NAN — arrive LAX Jul 5 ~1:45 PM same day",
+            "who": "All",
+            "icon": "✈️"
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "ONE NANNY PER CHILD is the standout feature here. With a 5yo, 2.5yo, and 1yo, having three dedicated caregivers is transformative.",
+      "The 2.5-hour drive from Nadi is long but avoids boats and seaplanes — huge plus if grandparents or toddlers get motion sick.",
+      "Being on the main island means you're near real hospitals, pharmacies, and stores — peace of mind with small children.",
+      "The all-inclusive option is worth it to avoid nickel-and-diming. Ask about the family package when booking.",
+      "Pacific Harbour is known as Fiji's adventure capital — if adults want a shark dive on Beqa Lagoon, this is the only resort where it's nearby.",
+      "Request the Grand Residence with the adjacent villa — it gives grandparents their own space while being steps away.",
+      "Pack car seats or request them from the resort — the drive from Nadi requires them, and Fijian rental agencies may not have the right sizes.",
+      "The local village visits here are genuinely authentic — not resort-staged. Bring a sevusevu (gift of kava root) from Nadi market."
+    ],
+    "costBreakdown": {
+      "flights": "$33,550 (6 business class seats + 1 lap infant, Fiji Airways LAX-NAN nonstop RT)",
+      "hotel": "$29,600–$42,400 (Grand Residence + adjacent villa, 8 nights)",
+      "activities": "$3,000 (Beqa Lagoon trips, rafting, fishing, village visits)",
+      "food": "$3,000–$5,000 (if not all-inclusive; less with all-inclusive package)",
+      "transfers": "$800 (private car RT Nadi–Nanuku, pre-installed car seats)",
+      "total": "$65K–$85K"
+    }
+  },
+  {
+    "id": "fiji-vomo",
+    "name": "Fiji — Vomo Island Resort",
+    "tier": "FIJI",
+    "tagline": "Baby butlers, a purpose-built Kids' Village, and manta rays in peak season — the island built for families with tiny humans",
+    "heroEmoji": "🏝️",
+    "scores": {
+      "wildlife": 8,
+      "kidMagic": 9,
+      "food": 8,
+      "travelEase": 6,
+      "weatherFit": 10,
+      "toddlerSafe": 10,
+      "grandparent": 9,
+      "luxury": 9,
+      "safety": 9,
+      "total": 88
+    },
+    "estimatedCost": "$95K–$110K",
+    "weather": "63–79°F, dry/cool season, low humidity",
+    "flightTime": "~11.5 hrs nonstop",
+    "flights": {
+      "outbound": {
+        "airline": "Fiji Airways",
+        "route": "LAX → NAN (Nadi)",
+        "class": "Business Class",
+        "duration": "~11.5 hrs",
+        "depart": "Jun 27, 10:30 PM PDT",
+        "arrive": "Jun 29, 5:00 AM FJT (+2 days, crosses date line)"
+      },
+      "return": {
+        "airline": "Fiji Airways",
+        "route": "NAN (Nadi) → LAX",
+        "class": "Business Class",
+        "duration": "~10.5 hrs",
+        "depart": "Jul 5, 9:15 PM FJT",
+        "arrive": "Jul 5, 1:45 PM PDT (same calendar day — gain a day crossing date line)"
+      }
+    },
+    "hotel": {
+      "name": "Vomo Island Resort",
+      "url": "https://vomofiji.com",
+      "rooms": [
+        {
+          "name": "The Residence (4-Bedroom)",
+          "for": "Entire family — 2 grandparents, 2 adults, 3 children",
+          "rate": "$6,130/night"
+        }
+      ],
+      "highlights": [
+        "All-inclusive: meals, drinks, kids' club, activities, non-motorized water sports",
+        "Purpose-built Kids' Village with age-appropriate programs for all age groups",
+        "\"Baby butlers\" for infants — trained in infant care, bottle prep, and nap routines",
+        "June–July is peak manta ray season — regular sightings from the island",
+        "House reef snorkeling directly from the beach",
+        "Turtle nesting season overlaps — possible sightings on the beach at dusk",
+        "3-pavilion layout gives grandparents their own private wing",
+        "Only 28 accommodations on the entire island — intimate and uncrowded"
+      ]
+    },
+    "days": [
+      {
+        "day": 1,
+        "title": "Travel Day — Red-Eye to Paradise",
+        "schedule": [
+          {
+            "time": "7:00 PM",
+            "activity": "Depart for LAX — allow extra time for international check-in with 3 small children",
+            "who": "All",
+            "icon": "🚗"
+          },
+          {
+            "time": "8:30 PM",
+            "activity": "Settle into Fiji Airways business class lounge — kids change into pajamas",
+            "who": "All",
+            "icon": "✈️"
+          },
+          {
+            "time": "10:30 PM",
+            "activity": "Fiji Airways FJ811 departs LAX — lie-flat seats, bassinet for 1yo",
+            "who": "All",
+            "icon": "🌙"
+          },
+          {
+            "time": "11:30 PM",
+            "activity": "Kids asleep, adults relax",
+            "who": "Adults + Grandparents",
+            "icon": "🍾"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Arrival Day — Helicopter to Vomo",
+        "schedule": [
+          {
+            "time": "5:00 AM FJT",
+            "activity": "Arrive Nadi International Airport — June 29. Clear immigration.",
+            "who": "All",
+            "icon": "✈️"
+          },
+          {
+            "time": "6:30 AM",
+            "activity": "Vomo's VIP airport lounge — breakfast, change, freshen up. Car seats and strollers stored.",
+            "who": "All",
+            "icon": "🥐"
+          },
+          {
+            "time": "8:00 AM",
+            "activity": "15-minute helicopter flight to Vomo Island — spectacular views of the Mamanuca chain. Shortest transfer of any private island option.",
+            "who": "All",
+            "icon": "🚁",
+            "url": "https://vomofiji.com/getting-here/"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "Arrive Vomo — Fijian welcome ceremony, meet the Kids' Village team and your baby butler",
+            "who": "All",
+            "icon": "🌺"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Tour The Residence — 3 pavilions, set up cribs and baby monitors, baby butler shows you the baby-proofed layout",
+            "who": "All",
+            "icon": "🏠"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Late brunch at The Reef Restaurant — all-inclusive dining begins. Fresh seafood, tropical fruits, kids' menu.",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — baby butler takes the 1yo, Kids' Village staff help with 2.5yo. Everyone rests.",
+            "who": "Kids nap / All rest",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "First beach session — wade into the calm lagoon, explore the sand, spot tiny fish in the shallows",
+            "who": "All",
+            "icon": "🏖️"
+          },
+          {
+            "time": "6:00 PM",
+            "activity": "Sunset welcome dinner at The Rocks — open-air dining with torches, Fijian feast",
+            "who": "All",
+            "icon": "🌅"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "House Reef & Kids' Village",
+        "schedule": [
+          {
+            "time": "7:30 AM",
+            "activity": "Breakfast at The Reef Restaurant — eggs, pancakes, fresh juice, Fijian breakfast spread",
+            "who": "All",
+            "icon": "🥞"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Guided house reef snorkel — the reef starts just steps from the beach. Adults and 5yo swim with a marine guide, spot parrotfish, clownfish, and sea cucumbers.",
+            "who": "Adults + 5yo",
+            "icon": "🤿",
+            "url": "https://vomofiji.com/experiences/"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Toddlers at Kids' Village — age-appropriate sensory play, water table, Fijian storytelling. Baby butler with the 1yo.",
+            "who": "2.5yo + 1yo at Kids' Village",
+            "icon": "🎨"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Grandparents relax at the beach loungers with tea and books — they've earned it",
+            "who": "Grandparents relax",
+            "icon": "📖"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Everyone regroups — sandcastle building session on the beach. Vomo staff provide buckets, molds, and flags.",
+            "who": "All",
+            "icon": "🏖️"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at Beach Bar — burgers, fish and chips, tropical smoothies, all included",
+            "who": "All",
+            "icon": "🍔"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — baby butler with 1yo, Kids' Village quiet time for 2.5yo. 5yo does a craft activity with staff.",
+            "who": "Toddlers nap / 5yo craft",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Kayaking and stand-up paddleboarding — adults and 5yo on the water, grandparents and toddlers splash in the shallows",
+            "who": "All",
+            "icon": "🚣"
+          },
+          {
+            "time": "5:30 PM",
+            "activity": "Beach walk around the island — Vomo is small enough to circumnavigate. Look for turtle tracks on the far beach.",
+            "who": "All",
+            "icon": "🐢"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner at The Reef Restaurant — catch of the day, pasta for kids, Fijian desserts",
+            "who": "All",
+            "icon": "🍽️"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Manta Ray Encounter",
+        "schedule": [
+          {
+            "time": "7:00 AM",
+            "activity": "Early breakfast — marine team reports mantas feeding at the nearby channel",
+            "who": "All",
+            "icon": "🥐"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "Manta ray snorkel excursion — private boat to the feeding station. June–July is peak season with near-daily sightings. Wingspans up to 15 ft.",
+            "who": "Adults + 5yo in water / Grandparents on boat",
+            "icon": "🦈",
+            "url": "https://vomofiji.com/experiences/"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "Toddlers at Kids' Village with baby butler — water play, music time, morning snack",
+            "who": "2.5yo + 1yo with staff",
+            "icon": "🎵"
+          },
+          {
+            "time": "10:30 AM",
+            "activity": "Return from manta expedition — everyone buzzing from the encounter. Hot chocolate at Beach Bar.",
+            "who": "All",
+            "icon": "☕"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at The Rocks — wood-fired pizzas, fresh salads, gelato for dessert",
+            "who": "All",
+            "icon": "🍕"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — baby butler handles the 1yo. Nap routine is smooth by Day 4.",
+            "who": "Kids nap",
+            "icon": "😴"
+          },
+          {
+            "time": "3:00 PM",
+            "activity": "Grandparents enjoy a couples massage at the island spa — oceanview treatment room",
+            "who": "Grandparents",
+            "icon": "💆"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Adults and 5yo try sailing — Hobie Cat lesson in the lagoon with an instructor",
+            "who": "Adults + 5yo",
+            "icon": "⛵"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Turtle nesting beach check at dusk — walk the far beach looking for tracks. Peak nesting season overlap.",
+            "who": "All",
+            "icon": "🐢"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Private beach dinner set up by the resort — lanterns, personal waiter, Fijian seafood feast under the stars",
+            "who": "All",
+            "icon": "🕯️"
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Cultural Day & Fishing",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Breakfast at The Reef Restaurant — leisurely start",
+            "who": "All",
+            "icon": "🥞"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Fijian cultural experience — traditional weaving, warrior dance demo, kava ceremony. 5yo learns a Fijian war dance.",
+            "who": "All",
+            "icon": "🏘️",
+            "url": "https://vomofiji.com/experiences/"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Coconut husking and palm weaving with Vomo staff — 5yo masters the coconut scrape, everyone weaves a palm fan",
+            "who": "All",
+            "icon": "🥥"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at Beach Bar — Fijian curry, coconut rice, fresh fruit",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — Kids' Village quiet room for 2.5yo, baby butler with 1yo",
+            "who": "Kids nap",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Deep-sea fishing trip — trolling for tuna, wahoo, and mahi-mahi. Grandpa and 5yo on the rods.",
+            "who": "Adults + Grandpa + 5yo",
+            "icon": "🎣"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Grandma relaxes at the residence with toddlers and baby butler — pool time, gentle play",
+            "who": "Grandma + Toddlers + Baby butler",
+            "icon": "🏊"
+          },
+          {
+            "time": "5:30 PM",
+            "activity": "Return from fishing — the chef will grill your catch for dinner",
+            "who": "All",
+            "icon": "🐟"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner at The Rocks — tonight's catch prepared three ways, plus resort menu favorites",
+            "who": "All",
+            "icon": "🍽️"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Beach Cinema & Lazy Luxury",
+        "schedule": [
+          {
+            "time": "8:30 AM",
+            "activity": "Slow morning — breakfast delivered to The Residence. Everyone in pajamas.",
+            "who": "All",
+            "icon": "☀️"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "Another guided snorkel at a different section of the house reef — each section has different coral and fish",
+            "who": "Adults + 5yo + Grandparents (who are brave now)",
+            "icon": "🤿"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "Baby butler and Kids' Village staff with toddlers — finger painting, shell collecting, splash pool",
+            "who": "2.5yo + 1yo with staff",
+            "icon": "🎨"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at The Reef — sushi and sashimi day, plus grilled meats and salads",
+            "who": "All",
+            "icon": "🍣"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — smooth as butter by now",
+            "who": "Kids nap",
+            "icon": "😴"
+          },
+          {
+            "time": "3:00 PM",
+            "activity": "Adults enjoy spa time — deep tissue massage after a week of activity",
+            "who": "Adults",
+            "icon": "💆"
+          },
+          {
+            "time": "3:00 PM",
+            "activity": "Grandparents take the 5yo on a nature walk — bird spotting with Vomo's naturalist guide",
+            "who": "Grandparents + 5yo",
+            "icon": "🦜"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Family pool and beach time — golden hour, photos, cocktails",
+            "who": "All",
+            "icon": "📸"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Early dinner at Beach Bar — keep it light tonight",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "7:30 PM",
+            "activity": "Beach cinema — Vomo sets up a screen on the sand. Family movie under the stars. 5yo makes it halfway. Baby butler handles the 1yo.",
+            "who": "All",
+            "icon": "🎬"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Second Manta Swim & Sunset Sail",
+        "schedule": [
+          {
+            "time": "7:00 AM",
+            "activity": "Sunrise walk on the beach — adults only, quiet moment before the kids wake",
+            "who": "Adults",
+            "icon": "🌅"
+          },
+          {
+            "time": "8:00 AM",
+            "activity": "Breakfast at The Reef Restaurant — the usual favorites",
+            "who": "All",
+            "icon": "🥞"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Second manta ray swim — the marine team spotted a group of 6+ mantas at the channel. This is the big one.",
+            "who": "Adults + 5yo in water / Grandparents on boat",
+            "icon": "🦈"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Toddlers at Kids' Village — music and movement class, water play",
+            "who": "2.5yo + 1yo with staff",
+            "icon": "🎵"
+          },
+          {
+            "time": "11:30 AM",
+            "activity": "Return from mantas — share photos, warm up with hot drinks at Beach Bar",
+            "who": "All",
+            "icon": "☕"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at The Rocks — celebration lunch, champagne for the adults",
+            "who": "All",
+            "icon": "🍾"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time",
+            "who": "Kids nap",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Free afternoon — pool, beach, hammocks. Everyone at their own pace.",
+            "who": "All",
+            "icon": "🏖️"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Sunset sailing trip around Vomo — catamaran cruise with drinks and canapes. Toddlers in life vests, calm seas.",
+            "who": "All",
+            "icon": "⛵"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Farewell dinner at The Reef — degustation menu, the chef pulls out all stops. Kids eat early with baby butler.",
+            "who": "All",
+            "icon": "🍷"
+          }
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Final Full Day — Island Goodbyes",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Last breakfast at The Reef — no rush, savor every bite",
+            "who": "All",
+            "icon": "🥐"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Final house reef snorkel — 5yo is now a certified fish-spotter. She names every clownfish.",
+            "who": "Adults + 5yo",
+            "icon": "🤿"
+          },
+          {
+            "time": "10:30 AM",
+            "activity": "Family photo session — Vomo's photographer captures the whole crew on the beach and at The Residence",
+            "who": "All",
+            "icon": "📸"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at Beach Bar — all the greatest hits one last time",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Final nap — pack while the kids sleep. Baby butler assists with baby gear.",
+            "who": "Kids nap / Adults pack",
+            "icon": "🧳"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Last swim in the residence pool — 2.5yo has finally learned to put her face in the water",
+            "who": "All",
+            "icon": "🏊"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Vomo farewell ceremony — staff singing, flower garlands, a carved whale tooth (tabua) presented to the family",
+            "who": "All",
+            "icon": "🎶"
+          },
+          {
+            "time": "6:00 PM",
+            "activity": "Early dinner at The Reef — keep it light for travel tomorrow",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "7:30 PM",
+            "activity": "Kids in bed — final nightcap for the adults on the terrace, listening to the waves",
+            "who": "Adults + Grandparents",
+            "icon": "🌟"
+          }
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Departure — Moce, Vomo",
+        "schedule": [
+          {
+            "time": "7:00 AM",
+            "activity": "Wake up, light breakfast at The Residence",
+            "who": "All",
+            "icon": "🥐"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "15-minute helicopter transfer to Nadi — quick and easy, kids love the chopper",
+            "who": "All",
+            "icon": "🚁"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Arrive Nadi — day at leisure, optional market visit or day-use hotel room for showers and naps",
+            "who": "All",
+            "icon": "🛍️"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Head to Nadi airport — Fiji Airways business class lounge",
+            "who": "All",
+            "icon": "🛋️"
+          },
+          {
+            "time": "9:15 PM",
+            "activity": "Fiji Airways FJ810 departs NAN — arrive LAX Jul 5 ~1:45 PM same day. You gain a day!",
+            "who": "All",
+            "icon": "✈️"
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "The baby butler service is Vomo's secret weapon. They are trained in infant care and will learn your 1yo's routine within hours.",
+      "The Kids' Village accepts all ages — they have separate programs for under-3s and 3-12. The 2.5yo will be entertained.",
+      "June–July manta ray season means near-daily sighting opportunities. The marine team tracks their movements daily.",
+      "The 15-minute helicopter from Nadi is the shortest private island transfer — huge with tired toddlers.",
+      "All-inclusive means you never sign a bill. Drinks, food, activities, kids' club — all covered. Truly stress-free.",
+      "Check the far beach at dusk for turtle nesting activity — the resort naturalist will guide you.",
+      "Request the beach cinema screening for a family movie night — Vomo sets up on the sand with blankets and popcorn.",
+      "Vomo has satellite phone and a nurse on-site. Emergency helicopter evacuation to Nadi hospital takes 15 minutes."
+    ],
+    "costBreakdown": {
+      "flights": "$33,550 (6 business class seats + 1 lap infant, Fiji Airways LAX-NAN nonstop RT)",
+      "hotel": "$49,040 (The Residence, 8 nights, all-inclusive)",
+      "activities": "$2,000 (most included; extra dive trips or private excursions)",
+      "food": "Included in all-inclusive rate",
+      "transfers": "$4,500 (helicopter RT: ~$750/person for adults, discounted kids)",
+      "total": "$95K–$110K"
+    }
+  },
+  {
     "id": "riviera-maya",
     "name": "Riviera Maya, Mexico",
     "tier": "A",
@@ -2714,6 +3879,1128 @@
       "food": "$6,000",
       "transfers": "$2,000",
       "total": "$35K–$43K"
+    }
+  },
+  {
+    "id": "fiji-kokomo",
+    "name": "Fiji — Kokomo Private Island",
+    "tier": "FIJI",
+    "tagline": "Your own island on the Great Astrolabe Reef — manta rays, marine biology, and a private butler for the whole family",
+    "heroEmoji": "🏝️",
+    "scores": {
+      "wildlife": 9,
+      "kidMagic": 9,
+      "food": 8,
+      "travelEase": 5,
+      "weatherFit": 10,
+      "toddlerSafe": 9,
+      "grandparent": 8,
+      "luxury": 10,
+      "safety": 9,
+      "total": 87
+    },
+    "estimatedCost": "$130K–$150K",
+    "weather": "63–79°F, dry/cool season, low humidity",
+    "flightTime": "~11.5 hrs nonstop",
+    "flights": {
+      "outbound": {
+        "airline": "Fiji Airways",
+        "route": "LAX → NAN (Nadi)",
+        "class": "Business Class",
+        "duration": "~11.5 hrs",
+        "depart": "Jun 27, 10:30 PM PDT",
+        "arrive": "Jun 29, 5:00 AM FJT (+2 days, crosses date line)"
+      },
+      "return": {
+        "airline": "Fiji Airways",
+        "route": "NAN (Nadi) → LAX",
+        "class": "Business Class",
+        "duration": "~10.5 hrs",
+        "depart": "Jul 5, 9:15 PM FJT",
+        "arrive": "Jul 5, 1:45 PM PDT (same calendar day — gain a day crossing date line)"
+      }
+    },
+    "hotel": {
+      "name": "Kokomo Private Island",
+      "url": "https://www.kokomoislandfiji.com",
+      "rooms": [
+        {
+          "name": "Ocean Grand Residence (4-Bedroom)",
+          "for": "Entire family — 2 grandparents, 2 adults, 3 children",
+          "rate": "$9,360/night + 15% tax = ~$10,764/night"
+        }
+      ],
+      "highlights": [
+        "All-inclusive: meals, non-alcoholic drinks, nanny, butler, laundry, island activities",
+        "Dedicated nanny included with residence — critical with 3 kids under 6",
+        "Private island with only 21 villas — supremely uncrowded",
+        "Sitting on the Great Astrolabe Reef, one of the world's largest barrier reefs",
+        "June–July is peak manta ray season — near-daily sightings from the island",
+        "Marine biology program and reef restoration activities for families",
+        "Cribs, high chairs, baby monitors, and kid-proofing provided on request"
+      ]
+    },
+    "days": [
+      {
+        "day": 1,
+        "title": "Travel Day — Red-Eye to Paradise",
+        "schedule": [
+          {
+            "time": "7:00 PM",
+            "activity": "Depart for LAX — allow extra time for international check-in with 3 small children and car seats",
+            "who": "All",
+            "icon": "🚗"
+          },
+          {
+            "time": "8:30 PM",
+            "activity": "Clear through security, settle into Fiji Airways business class lounge — kids snack, change into pajamas",
+            "who": "All",
+            "icon": "✈️"
+          },
+          {
+            "time": "10:30 PM",
+            "activity": "Fiji Airways FJ811 departs LAX — lie-flat seats, bassinet for 1yo, melatonin for kids if pediatrician-approved",
+            "who": "All",
+            "icon": "🌙"
+          },
+          {
+            "time": "11:30 PM",
+            "activity": "Kids asleep, adults relax — business class amenity kits, movie, champagne",
+            "who": "Adults + Grandparents",
+            "icon": "🍾"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Arrival Day — Seaplane to Kokomo",
+        "schedule": [
+          {
+            "time": "5:00 AM FJT",
+            "activity": "Arrive Nadi International Airport (NAN) — June 29 (skipped June 28 crossing date line). Clear immigration and customs.",
+            "who": "All",
+            "icon": "✈️"
+          },
+          {
+            "time": "6:30 AM",
+            "activity": "Transfer to seaplane terminal — Kokomo arranges private check-in lounge with breakfast and play area for kids",
+            "who": "All",
+            "icon": "🥐"
+          },
+          {
+            "time": "8:00 AM",
+            "activity": "45-minute seaplane flight to Kokomo Private Island — stunning aerial views of the reef. Life vests for all children.",
+            "who": "All",
+            "icon": "🛩️",
+            "url": "https://www.kokomoislandfiji.com/getting-here/"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Arrive Kokomo — traditional Fijian welcome ceremony with flower garlands. Meet your butler and nanny.",
+            "who": "All",
+            "icon": "🌺"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "Settle into Ocean Grand Residence — unpack, tour the villa, set up cribs and baby-proofing",
+            "who": "All",
+            "icon": "🏠"
+          },
+          {
+            "time": "11:30 AM",
+            "activity": "Lunch at Beach Shack — fresh fish tacos, tropical smoothies, kids menu. Toes in the sand.",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — all three kids down in the residence. Nanny monitors. Adults decompress at the private pool.",
+            "who": "Kids nap / Adults relax",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Gentle beach exploration — wade in the shallow lagoon, collect shells. Grandparents and 5yo build sandcastles.",
+            "who": "All",
+            "icon": "🐚"
+          },
+          {
+            "time": "5:30 PM",
+            "activity": "Welcome sunset dinner at the main restaurant — Fijian tasting menu, kids eat early with nanny if needed",
+            "who": "All",
+            "icon": "🌅"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Great Astrolabe Reef Discovery",
+        "schedule": [
+          {
+            "time": "7:30 AM",
+            "activity": "Breakfast at the residence — butler brings fresh tropical fruit, eggs, Fijian pancakes",
+            "who": "All",
+            "icon": "🥞"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Private glass-bottom boat tour of the Great Astrolabe Reef — safe for all ages, spot turtles, reef sharks, and parrotfish from the boat",
+            "who": "All",
+            "icon": "🐢",
+            "url": "https://www.kokomoislandfiji.com/experiences/"
+          },
+          {
+            "time": "10:30 AM",
+            "activity": "Snorkeling at a shallow reef shelf — adults and 5yo with guide, grandparents float with noodles, toddlers watch from boat with nanny",
+            "who": "Adults + 5yo snorkel / Grandparents + toddlers on boat",
+            "icon": "🤿"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at Beach Shack — grilled mahi-mahi, coconut rice, fresh juices",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — kids rest at the residence with nanny. Grandparents retreat to their wing for rest.",
+            "who": "Kids nap / Grandparents rest",
+            "icon": "😴"
+          },
+          {
+            "time": "3:00 PM",
+            "activity": "Adults enjoy complimentary spa treatment (included with residence) — Fijian bobo massage",
+            "who": "Adults",
+            "icon": "💆"
+          },
+          {
+            "time": "4:00 PM",
+            "activity": "Paddleboarding and kayaking in the lagoon — 5yo rides tandem kayak with an adult, toddlers play on the beach with nanny",
+            "who": "Adults + 5yo paddle / Toddlers beach play",
+            "icon": "🚣"
+          },
+          {
+            "time": "5:30 PM",
+            "activity": "Coconut husking and weaving demo with Fijian staff — 5yo tries husking, everyone learns to weave palm fronds",
+            "who": "All",
+            "icon": "🥥"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner at main restaurant — catch of the day, wood-fired pizza for kids, local Fijian dishes",
+            "who": "All",
+            "icon": "🍕"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Manta Ray Magic",
+        "schedule": [
+          {
+            "time": "7:00 AM",
+            "activity": "Early breakfast — the marine biologist says mantas are feeding at the channel this morning",
+            "who": "All",
+            "icon": "🥐"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "Manta ray swim excursion — private boat to a known manta feeding station. Snorkel with mantas (wingspans up to 15 ft!). Adults and 5yo in water, others watch from boat.",
+            "who": "Adults + 5yo swim / Grandparents + toddlers on boat",
+            "icon": "🦈",
+            "url": "https://www.kokomoislandfiji.com/experiences/"
+          },
+          {
+            "time": "10:30 AM",
+            "activity": "Marine biology lab visit — Kokomo's resident marine biologist shows the kids coral fragments being grown for reef restoration",
+            "who": "All",
+            "icon": "🔬"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at the residence — private chef prepares a Fijian feast on the villa terrace",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — nanny with kids. Adults and grandparents enjoy the residence pool and hammocks.",
+            "who": "Kids nap / Adults + Grandparents relax",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Reef restoration activity — help plant coral fragments on the reef with Kokomo's marine team (adults + 5yo in shallow water)",
+            "who": "Adults + 5yo",
+            "icon": "🪸"
+          },
+          {
+            "time": "4:30 PM",
+            "activity": "Grandparents take toddlers to the beach — gentle waves, sand play, shell collecting",
+            "who": "Grandparents + toddlers",
+            "icon": "🏖️"
+          },
+          {
+            "time": "6:00 PM",
+            "activity": "Sunset cocktails on the beach — fresh coconut drinks for kids, tropical cocktails for adults",
+            "who": "All",
+            "icon": "🍹"
+          },
+          {
+            "time": "7:00 PM",
+            "activity": "Dinner at Beach Shack — barefoot beachside dining, Fijian lovo-inspired dishes",
+            "who": "All",
+            "icon": "🌴"
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Village Visit & Island Culture",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Breakfast at main restaurant — full buffet with Fijian and Western options",
+            "who": "All",
+            "icon": "🥞"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Boat trip to nearby Fijian village — traditional kava ceremony, meet local families, visit the school. Bring small gifts for village children.",
+            "who": "All",
+            "icon": "🏘️",
+            "url": "https://www.kokomoislandfiji.com/experiences/"
+          },
+          {
+            "time": "11:30 AM",
+            "activity": "Return to Kokomo — 5yo plays with local kids at the village, a memory for life",
+            "who": "All",
+            "icon": "🛶"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at main restaurant — fresh sashimi, grilled seafood platter",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — nanny takes kids. Adults book spa treatments or read by the pool.",
+            "who": "Kids nap / Adults relax",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Fishing trip — trolling for wahoo and tuna outside the reef. Grandpa and 5yo are the designated anglers.",
+            "who": "Grandparents + Adults + 5yo",
+            "icon": "🎣"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Toddlers wake from late nap — beach play with nanny, gentle lagoon splash",
+            "who": "Toddlers + Nanny",
+            "icon": "🏖️"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Private villa BBQ — chef grills today's catch on the residence terrace. Fijian guitar music.",
+            "who": "All",
+            "icon": "🔥"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Lazy Island Day & Snorkeling",
+        "schedule": [
+          {
+            "time": "8:30 AM",
+            "activity": "Slow morning — breakfast delivered to the residence. Kids play in the villa pool.",
+            "who": "All",
+            "icon": "☀️"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "Grandparents enjoy a couples massage at the spa while nanny watches the toddlers at the Kids' Club",
+            "who": "Grandparents at spa / Toddlers with nanny",
+            "icon": "💆"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "Adults and 5yo do a guided snorkel of the house reef — spot clownfish, sea cucumbers, and maybe a reef shark",
+            "who": "Adults + 5yo",
+            "icon": "🤿"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at Beach Shack — burgers, poke bowls, fresh fruit platters",
+            "who": "All",
+            "icon": "🍔"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — toddlers and 1yo down. 5yo does a treasure hunt activity with island staff.",
+            "who": "Toddlers nap / 5yo activity",
+            "icon": "😴"
+          },
+          {
+            "time": "3:00 PM",
+            "activity": "Stand-up paddleboard yoga for grandparents and adults — calm lagoon, guided session",
+            "who": "Adults + Grandparents",
+            "icon": "🧘"
+          },
+          {
+            "time": "4:30 PM",
+            "activity": "Family beach time — everyone together for sandcastles, wading, and photo session",
+            "who": "All",
+            "icon": "📸"
+          },
+          {
+            "time": "6:00 PM",
+            "activity": "Sunset sail on a traditional Fijian drua (double-hull canoe) — gentle 45-min sail around the island",
+            "who": "All",
+            "icon": "⛵"
+          },
+          {
+            "time": "7:00 PM",
+            "activity": "Farewell-style dinner at main restaurant — degustation menu with Fijian wine pairings",
+            "who": "All",
+            "icon": "🍷"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Deep Reef & Rainforest Hike",
+        "schedule": [
+          {
+            "time": "7:00 AM",
+            "activity": "Early snorkel or dive at the outer reef for adults — Kokomo's private dive boat. Whale sightings possible in late June.",
+            "who": "Adults (optional)",
+            "icon": "🤿"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "Breakfast together at the residence — pancakes shaped like sea turtles for the kids",
+            "who": "All",
+            "icon": "🐢"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "Guided nature walk through the island's interior rainforest — spot iguanas, tropical birds, coconut crabs. Stroller-friendly first half.",
+            "who": "All",
+            "icon": "🌿"
+          },
+          {
+            "time": "11:30 AM",
+            "activity": "Coconut cream cooking class at the main kitchen — learn to make kokoda (Fijian ceviche). 5yo helps squeeze limes.",
+            "who": "All (hands-on for adults + 5yo)",
+            "icon": "🥥"
+          },
+          {
+            "time": "12:30 PM",
+            "activity": "Eat what you made — kokoda lunch plus grilled reef fish at Beach Shack",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — the usual routine. Nanny and butler handle it.",
+            "who": "Kids nap",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Second manta ray swim attempt — marine biologist reports a large group feeding at the channel. Cannot miss this.",
+            "who": "Adults + 5yo in water / Others on boat",
+            "icon": "🦈"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Free time — pool, hammocks, villa time. Grandparents read on the terrace.",
+            "who": "All",
+            "icon": "📖"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Private beach dinner — table set up on the sand with lanterns, personal chef, guitarist. Special last-full-day celebration.",
+            "who": "All",
+            "icon": "🕯️"
+          }
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Final Full Day — Soak It In",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Leisurely breakfast at main restaurant — no rush today",
+            "who": "All",
+            "icon": "🥐"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "One last snorkel at the house reef — the kids have gotten brave this week. 5yo spots a turtle on her own.",
+            "who": "All (5yo + adults snorkel, toddlers wade)",
+            "icon": "🐢"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Family photo session arranged by the resort — on the beach, in the villa, candid island shots",
+            "who": "All",
+            "icon": "📸"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at Beach Shack — order all the favorites one last time",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Final nap time — start packing while kids sleep. Butler assists with luggage.",
+            "who": "Kids nap / Adults pack",
+            "icon": "🧳"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Goodbye swim in the villa pool — kids splash, adults sip champagne",
+            "who": "All",
+            "icon": "🏊"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Traditional Fijian farewell song from staff — emotional. Pack last items.",
+            "who": "All",
+            "icon": "🎶"
+          },
+          {
+            "time": "6:00 PM",
+            "activity": "Early dinner at main restaurant — light meal before tomorrow's travel",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "7:30 PM",
+            "activity": "Kids in bed early — adults enjoy a final nightcap on the terrace under the stars",
+            "who": "Adults + Grandparents",
+            "icon": "🌟"
+          }
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Departure — Bula Vinaka, Kokomo",
+        "schedule": [
+          {
+            "time": "6:00 AM",
+            "activity": "Wake up, final breakfast at the residence — butler has everything ready",
+            "who": "All",
+            "icon": "🌅"
+          },
+          {
+            "time": "7:30 AM",
+            "activity": "Seaplane transfer back to Nadi (45 min) — kids love the low-altitude flight over the reef",
+            "who": "All",
+            "icon": "🛩️"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "Arrive Nadi — optional quick stop at Nadi Town market for last-minute souvenirs",
+            "who": "All",
+            "icon": "🛍️"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Relax at the Fiji Airways business class lounge — showers available, kids' play area",
+            "who": "All",
+            "icon": "🛋️"
+          },
+          {
+            "time": "9:15 PM",
+            "activity": "Fiji Airways FJ810 departs NAN — overnight flight, arrive LAX Jul 5 ~1:45 PM same day. You gain a day!",
+            "who": "All",
+            "icon": "✈️"
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Book the seaplane transfers through Kokomo directly — they coordinate timing with your international flight and provide a private lounge at Nadi.",
+      "June–July is peak manta ray season at the Great Astrolabe Reef. You are virtually guaranteed sightings. Bring an underwater camera.",
+      "The nanny included with the Grand Residence is a game-changer. She will learn your kids' routines by Day 2.",
+      "Pack reef-safe sunscreen (required by Kokomo) and UV suits for the kids — the water is clear and the sun is strong even in winter.",
+      "Request baby-proofing for the residence before arrival: outlet covers, cabinet locks, pool fence confirmation.",
+      "Bring motion sickness remedies for the seaplane — it can be bumpy. Dramamine for Kids works well.",
+      "The island has a small on-site medical clinic staffed by a nurse. Nearest hospital is in Suva (helicopter evacuation available).",
+      "Wi-Fi is available but slow — this is a feature, not a bug. Download shows and books before departure."
+    ],
+    "costBreakdown": {
+      "flights": "$33,550 (6 business class seats + 1 lap infant, Fiji Airways LAX-NAN nonstop RT)",
+      "hotel": "$86,112 (Ocean Grand Residence, 8 nights, all-inclusive)",
+      "activities": "$2,000 (most included; extra dive trips, fishing charters)",
+      "food": "Included in all-inclusive rate",
+      "transfers": "$8,400 (seaplane RT: ~$1,200/person x 6 adults + discounted kids)",
+      "total": "$130K–$150K"
+    }
+  },
+  {
+    "id": "fiji-six-senses",
+    "name": "Fiji — Six Senses Fiji",
+    "tier": "FIJI",
+    "tagline": "Sustainability meets ultra-luxury on Malolo Island — organic gardens, coral reefs, and 8 free hours of nanny care daily",
+    "heroEmoji": "🏝️",
+    "scores": {
+      "wildlife": 7,
+      "kidMagic": 8,
+      "food": 9,
+      "travelEase": 6,
+      "weatherFit": 10,
+      "toddlerSafe": 9,
+      "grandparent": 9,
+      "luxury": 10,
+      "safety": 9,
+      "total": 87
+    },
+    "estimatedCost": "$95K–$120K",
+    "weather": "63–79°F, dry/cool season, low humidity",
+    "flightTime": "~11.5 hrs nonstop",
+    "flights": {
+      "outbound": {
+        "airline": "Fiji Airways",
+        "route": "LAX → NAN (Nadi)",
+        "class": "Business Class",
+        "duration": "~11.5 hrs",
+        "depart": "Jun 27, 10:30 PM PDT",
+        "arrive": "Jun 29, 5:00 AM FJT (+2 days, crosses date line)"
+      },
+      "return": {
+        "airline": "Fiji Airways",
+        "route": "NAN (Nadi) → LAX",
+        "class": "Business Class",
+        "duration": "~10.5 hrs",
+        "depart": "Jul 5, 9:15 PM FJT",
+        "arrive": "Jul 5, 1:45 PM PDT (same calendar day — gain a day crossing date line)"
+      }
+    },
+    "hotel": {
+      "name": "Six Senses Fiji",
+      "url": "https://www.sixsenses.com/en/hotels-resorts/asia-the-pacific/fiji/fiji/",
+      "rooms": [
+        {
+          "name": "4-Bedroom Beachfront Pool Residence",
+          "for": "Entire family — 2 grandparents, 2 adults, 3 children",
+          "rate": "$5,000–$6,000/night"
+        }
+      ],
+      "highlights": [
+        "Free nanny service 8 hours/day for residence guests — huge for 3 kids under 6",
+        "Grow With Six Senses kids' club with age-appropriate programming",
+        "8,180 sq ft residence — everyone has space and privacy",
+        "Organic garden and sustainability center — educational for the 5yo",
+        "Private beach access directly from the residence",
+        "Six Senses Spa — consistently rated among the best in the South Pacific",
+        "Not all-inclusive (room only) — allows flexibility to eat where and when you want"
+      ]
+    },
+    "days": [
+      {
+        "day": 1,
+        "title": "Travel Day — Red-Eye to Paradise",
+        "schedule": [
+          {
+            "time": "7:00 PM",
+            "activity": "Depart for LAX — allow extra time for international check-in with 3 small children",
+            "who": "All",
+            "icon": "🚗"
+          },
+          {
+            "time": "8:30 PM",
+            "activity": "Settle into Fiji Airways business class lounge — kids change into pajamas",
+            "who": "All",
+            "icon": "✈️"
+          },
+          {
+            "time": "10:30 PM",
+            "activity": "Fiji Airways FJ811 departs LAX — lie-flat seats, bassinet for 1yo",
+            "who": "All",
+            "icon": "🌙"
+          },
+          {
+            "time": "11:30 PM",
+            "activity": "Kids asleep, adults relax with champagne and movies",
+            "who": "Adults + Grandparents",
+            "icon": "🍾"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Arrival Day — Helicopter to Malolo",
+        "schedule": [
+          {
+            "time": "5:00 AM FJT",
+            "activity": "Arrive Nadi International Airport (NAN) — June 29. Clear immigration.",
+            "who": "All",
+            "icon": "✈️"
+          },
+          {
+            "time": "6:30 AM",
+            "activity": "Transfer to helicopter pad — Six Senses arranges VIP meet-and-greet at the airport",
+            "who": "All",
+            "icon": "🥐"
+          },
+          {
+            "time": "7:30 AM",
+            "activity": "10-minute helicopter transfer to Malolo Island — kids will love the aerial views of the Mamanuca Islands",
+            "who": "All",
+            "icon": "🚁",
+            "url": "https://www.sixsenses.com/en/hotels-resorts/asia-the-pacific/fiji/fiji/"
+          },
+          {
+            "time": "8:00 AM",
+            "activity": "Arrive Six Senses — welcome drinks, meet your GEM (Guest Experience Maker) and nanny",
+            "who": "All",
+            "icon": "🌺"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Settle into the 4-Bedroom Beachfront Pool Residence — unpack, set up cribs, explore the grounds",
+            "who": "All",
+            "icon": "🏠"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Late breakfast/brunch at Tovolea restaurant — farm-to-table menu, ocean views",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — all three kids down in the residence. Nanny monitors. Adults nap or explore.",
+            "who": "Kids nap / Adults relax",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Gentle beach walk and lagoon wade — the residence opens directly onto a calm sandy beach",
+            "who": "All",
+            "icon": "🏖️"
+          },
+          {
+            "time": "6:00 PM",
+            "activity": "Welcome dinner at Rara restaurant — Fijian-inspired tasting menu, kids menu available",
+            "who": "All",
+            "icon": "🍷"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Organic Garden & Reef Snorkeling",
+        "schedule": [
+          {
+            "time": "7:30 AM",
+            "activity": "Breakfast at the residence — private chef prepares eggs-to-order, fresh juice, Fijian fruit",
+            "who": "All",
+            "icon": "🥞"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Visit the Six Senses organic garden — pick herbs and vegetables with the 5yo, learn about sustainable farming",
+            "who": "All",
+            "icon": "🌱",
+            "url": "https://www.sixsenses.com/en/hotels-resorts/asia-the-pacific/fiji/fiji/sustainability/"
+          },
+          {
+            "time": "10:30 AM",
+            "activity": "Guided snorkeling at the house reef — adults and 5yo with marine guide, grandparents relax on the beach, nanny with toddlers",
+            "who": "Adults + 5yo snorkel / Grandparents relax / Toddlers + Nanny",
+            "icon": "🤿"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at the Beach Bar — grilled seafood, fresh salads, smoothie bar",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — nanny takes kids. Adults enjoy the infinity pool or hammocks.",
+            "who": "Kids nap / Adults relax",
+            "icon": "😴"
+          },
+          {
+            "time": "3:00 PM",
+            "activity": "Grandparents enjoy a signature Fijian massage at Six Senses Spa",
+            "who": "Grandparents",
+            "icon": "💆"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Grow With Six Senses activity for the 5yo — nature art, shell painting, or bug hunting",
+            "who": "5yo",
+            "icon": "🎨"
+          },
+          {
+            "time": "4:30 PM",
+            "activity": "Family pool time — everyone in the private residence pool. Floaties for the toddlers.",
+            "who": "All",
+            "icon": "🏊"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner at Tovolea — seasonal prix fixe, locally sourced seafood. Kids eat at 6 with nanny if needed.",
+            "who": "All",
+            "icon": "🍽️"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Island Hopping & Fijian Cooking Class",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Breakfast at Tovolea — fresh pastries, tropical fruit, eggs Benedict",
+            "who": "All",
+            "icon": "🥐"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Private island-hopping boat trip around the Mamanuca Islands — stop at a sandbar for photos, visit a tiny uninhabited island",
+            "who": "All",
+            "icon": "⛵",
+            "url": "https://www.sixsenses.com/en/hotels-resorts/asia-the-pacific/fiji/fiji/experiences/"
+          },
+          {
+            "time": "11:30 AM",
+            "activity": "Snorkel stop at a pristine reef — calm shallow water, perfect for the 5yo. Toddlers splash on the sandbar.",
+            "who": "Adults + 5yo snorkel / Toddlers sandbar play",
+            "icon": "🤿"
+          },
+          {
+            "time": "12:30 PM",
+            "activity": "Beach picnic prepared by Six Senses on a private stretch of sand — lobster rolls, sushi, tropical fruit",
+            "who": "All",
+            "icon": "🧺"
+          },
+          {
+            "time": "1:30 PM",
+            "activity": "Return to resort for nap time — boat ride back lulls the toddlers to sleep",
+            "who": "Kids nap",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Fijian cooking class — learn to make kokoda (coconut ceviche), lolo chicken, and cassava cake. 5yo helps.",
+            "who": "Adults + Grandparents + 5yo",
+            "icon": "👨‍🍳"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Toddlers wake — beach play with nanny on the residence beach",
+            "who": "Toddlers + Nanny",
+            "icon": "🏖️"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Eat what you cooked for dinner — private residence dining with your Fijian creations plus chef additions",
+            "who": "All",
+            "icon": "🍽️"
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Wellness & Water Day",
+        "schedule": [
+          {
+            "time": "7:00 AM",
+            "activity": "Sunrise yoga on the beach for adults — Six Senses signature session. Grandparents welcome.",
+            "who": "Adults + Grandparents (optional)",
+            "icon": "🧘"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "Breakfast together at the residence — slow morning, everyone in pajamas",
+            "who": "All",
+            "icon": "🥞"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "Adults enjoy the Six Senses Spa — signature Fiji Healer treatment (90 min). Nanny and grandparents with kids.",
+            "who": "Adults at spa / Grandparents + Nanny with kids",
+            "icon": "💆"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "Grandparents take 5yo to the Grow With Six Senses club for a marine discovery session",
+            "who": "Grandparents + 5yo",
+            "icon": "🐠"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at Rara — seared tuna, green papaya salad, fish and chips for kids",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — kids rest. Adults read or nap.",
+            "who": "Kids nap / Adults relax",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Kayaking and paddleboarding in the lagoon — 5yo tandem kayaks with Dad, toddlers play in the shallows",
+            "who": "All",
+            "icon": "🚣"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Sunset from the Beach Bar — cocktails for adults, fresh coconut water for kids, live Fijian guitar",
+            "who": "All",
+            "icon": "🌅"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner at Beach Bar — casual beachside dining, wood-fired pizzas, fresh sashimi",
+            "who": "All",
+            "icon": "🍕"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Coral Planting & Cultural Immersion",
+        "schedule": [
+          {
+            "time": "8:00 AM",
+            "activity": "Breakfast at Tovolea — last chance for those Fijian pancakes",
+            "who": "All",
+            "icon": "🥞"
+          },
+          {
+            "time": "9:30 AM",
+            "activity": "Coral planting activity with the resort's marine biologist — learn about reef conservation, plant your own coral fragment",
+            "who": "All (adults + 5yo in water, others observe from boat)",
+            "icon": "🪸",
+            "url": "https://www.sixsenses.com/en/hotels-resorts/asia-the-pacific/fiji/fiji/sustainability/"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Fijian village visit arranged by the resort — kava ceremony, meet local artisans, learn about island life",
+            "who": "All",
+            "icon": "🏘️"
+          },
+          {
+            "time": "12:30 PM",
+            "activity": "Lunch at Rara — light bites and cold drinks after a warm morning",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time — reliable as clockwork by Day 6",
+            "who": "Kids nap",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Free afternoon — pool time, beach walks, reading, whatever feels right",
+            "who": "All",
+            "icon": "☀️"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Family photo session on the beach — Six Senses arranges a professional photographer",
+            "who": "All",
+            "icon": "📸"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Private dinner on the beach — table set up on the sand with torches and a personal chef",
+            "who": "All",
+            "icon": "🕯️"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Adventure & Exploration",
+        "schedule": [
+          {
+            "time": "7:30 AM",
+            "activity": "Breakfast at the residence — early start for the morning's adventure",
+            "who": "All",
+            "icon": "🥐"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Guided hike to the Malolo Island lookout point — moderate trail, carrier for the 1yo, stroller-friendly lower section for grandparents",
+            "who": "All (grandparents do lower section)",
+            "icon": "🥾"
+          },
+          {
+            "time": "10:30 AM",
+            "activity": "Deep-water snorkeling trip for adventurous adults — drift snorkel along the outer reef wall",
+            "who": "Adults",
+            "icon": "🤿"
+          },
+          {
+            "time": "10:30 AM",
+            "activity": "Grandparents and kids at the Grow With Six Senses club — craft time and nature walk",
+            "who": "Grandparents + Kids",
+            "icon": "🎨"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at Beach Bar — everyone's favorites by now",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Nap time",
+            "who": "Kids nap",
+            "icon": "😴"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Fishing trip — trolling for tuna and mahi-mahi. Grandpa and 5yo are the designated anglers.",
+            "who": "Grandparents + Adults + 5yo",
+            "icon": "🎣"
+          },
+          {
+            "time": "5:30 PM",
+            "activity": "Toddlers beach play with nanny — last big beach session",
+            "who": "Toddlers + Nanny",
+            "icon": "🏖️"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Dinner at Tovolea — chef's farewell tasting menu, Fijian wine pairings",
+            "who": "All",
+            "icon": "🍷"
+          }
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Final Full Day — Soak It In",
+        "schedule": [
+          {
+            "time": "8:30 AM",
+            "activity": "Slow morning breakfast at the residence — no agenda until checkout vibes",
+            "who": "All",
+            "icon": "☀️"
+          },
+          {
+            "time": "10:00 AM",
+            "activity": "One last snorkel at the house reef — the 5yo is now a confident snorkeler",
+            "who": "Adults + 5yo",
+            "icon": "🤿"
+          },
+          {
+            "time": "11:00 AM",
+            "activity": "Grandparents enjoy a final spa session — hot stone massage",
+            "who": "Grandparents",
+            "icon": "💆"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at Beach Bar — order everything you loved",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "1:00 PM",
+            "activity": "Final nap — pack while kids sleep",
+            "who": "Kids nap / Adults pack",
+            "icon": "🧳"
+          },
+          {
+            "time": "3:30 PM",
+            "activity": "Last swim in the residence pool — 5yo does her best cannonball",
+            "who": "All",
+            "icon": "🏊"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Farewell from the Six Senses team — Fijian song and flower garlands",
+            "who": "All",
+            "icon": "🎶"
+          },
+          {
+            "time": "6:30 PM",
+            "activity": "Early dinner at Rara — light meal before tomorrow's travel",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "7:30 PM",
+            "activity": "Kids in bed — adults enjoy a final glass of wine on the terrace",
+            "who": "Adults + Grandparents",
+            "icon": "🌟"
+          }
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Departure — Vinaka, Six Senses",
+        "schedule": [
+          {
+            "time": "7:00 AM",
+            "activity": "Wake and breakfast — quick meal at the residence",
+            "who": "All",
+            "icon": "🥐"
+          },
+          {
+            "time": "8:30 AM",
+            "activity": "Helicopter transfer to Nadi (10 min) — quick and painless with small kids",
+            "who": "All",
+            "icon": "🚁"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Arrive Nadi — relax, explore Nadi town, or lounge at a day-use hotel room",
+            "who": "All",
+            "icon": "🛍️"
+          },
+          {
+            "time": "5:00 PM",
+            "activity": "Head to Nadi airport — Fiji Airways business class lounge",
+            "who": "All",
+            "icon": "🛋️"
+          },
+          {
+            "time": "9:15 PM",
+            "activity": "Fiji Airways FJ810 departs NAN — arrive LAX Jul 5 ~1:45 PM same day",
+            "who": "All",
+            "icon": "✈️"
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Six Senses is NOT all-inclusive — budget $200–300/person/day for meals. The food is exceptional but adds up for 7 people.",
+      "The free 8-hour nanny service for residence guests is a massive perk. Book your preferred hours at check-in (typically 9 AM – 5 PM).",
+      "The helicopter transfer from Nadi is only 10 minutes — far less stressful than a boat with toddlers. Worth every penny.",
+      "Grow With Six Senses kids' club accepts ages 4+ for supervised activities. The 5yo will love it; the 2.5yo may need nanny accompaniment.",
+      "The organic garden tour is surprisingly engaging for kids — they get to pick vegetables and eat what they grow.",
+      "Pack reef-safe sunscreen — required and taken seriously at Six Senses.",
+      "Request a baby monitor, crib, high chair, and pool fence check before arrival.",
+      "The resort has an on-site wellness practitioner — great for grandparents dealing with jet lag or sore backs."
+    ],
+    "costBreakdown": {
+      "flights": "$33,550 (6 business class seats + 1 lap infant, Fiji Airways LAX-NAN nonstop RT)",
+      "hotel": "$40,000–$48,000 (4-Bedroom Beachfront Pool Residence, 8 nights)",
+      "activities": "$3,000 (island hopping, fishing, coral planting, misc excursions)",
+      "food": "$12,000–$16,000 (~$250/person/day x 5 adults x 8 days + kids meals)",
+      "transfers": "$3,500 (helicopter RT: ~$500/person x 6 adults + kids)",
+      "total": "$95K–$120K"
     }
   },
   {
@@ -9432,6 +11719,259 @@
       "food": "$6,500 (9 days, 7 people, mix of fine dining and casual)",
       "transfers": "$2,000 (floatplanes, taxis, Vancouver transit)",
       "total": "$44K–63K"
+    }
+  },
+  {
+    "id": "fiji-laucala",
+    "name": "Fiji — Laucala Island",
+    "tier": "FIJI",
+    "tagline": "CLOSED FOR 2026 — Reopening Feb 2027",
+    "heroEmoji": "🏝️",
+    "scores": {
+      "wildlife": 8,
+      "kidMagic": 7,
+      "food": 9,
+      "travelEase": 4,
+      "weatherFit": 10,
+      "toddlerSafe": 7,
+      "grandparent": 7,
+      "luxury": 10,
+      "safety": 9,
+      "total": 81
+    },
+    "estimatedCost": "$150K–$200K (when open)",
+    "weather": "63–79°F, dry/cool season, low humidity",
+    "flightTime": "~11.5 hrs nonstop",
+    "flights": {
+      "outbound": {
+        "airline": "Fiji Airways",
+        "route": "LAX → NAN (Nadi)",
+        "class": "Business Class",
+        "duration": "~11.5 hrs",
+        "depart": "Jun 27, 10:30 PM PDT",
+        "arrive": "Jun 29, 5:00 AM FJT (+2 days, crosses date line)"
+      },
+      "return": {
+        "airline": "Fiji Airways",
+        "route": "NAN (Nadi) → LAX",
+        "class": "Business Class",
+        "duration": "~10.5 hrs",
+        "depart": "Jul 5, 9:15 PM FJT",
+        "arrive": "Jul 5, 1:45 PM PDT (same calendar day)"
+      }
+    },
+    "hotel": {
+      "name": "Laucala Island (CLOSED — Reopening February 2027)",
+      "url": "https://www.laucala.com",
+      "rooms": [
+        {
+          "name": "Plantation Villa (1-Bedroom) x2 + Overwater Villa",
+          "for": "Would require 2-3 villas for the full family",
+          "rate": "$5,000–$8,000/night per villa (estimated post-renovation)"
+        }
+      ],
+      "highlights": [
+        "CLOSED FOR RENOVATION — not bookable for June–July 2026",
+        "Reopening February 2027 — if you want to plan a return trip, this is the one",
+        "Owned by Red Bull co-founder's estate — no expense spared, ever",
+        "Private 3,200-acre island with its own airstrip, golf course, and farm",
+        "All-inclusive at the highest level — Cristal champagne, private submarines, horseback riding",
+        "When open: the single most exclusive resort in Fiji, arguably the South Pacific",
+        "Less kid-focused than other options — better suited for families with older children",
+        "Private island charter flight from Nadi on Laucala's own aircraft"
+      ]
+    },
+    "days": [
+      {
+        "day": 1,
+        "title": "UNAVAILABLE — Laucala Island is Closed for Renovation",
+        "schedule": [
+          {
+            "time": "N/A",
+            "activity": "Laucala Island is closed for a comprehensive renovation and will reopen in February 2027. This itinerary is a placeholder showing what a trip WOULD look like when the resort reopens.",
+            "who": "N/A",
+            "icon": "🚧"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "What Arrival Day Would Look Like",
+        "schedule": [
+          {
+            "time": "5:00 AM",
+            "activity": "Arrive Nadi after overnight Fiji Airways flight from LAX",
+            "who": "All",
+            "icon": "✈️"
+          },
+          {
+            "time": "8:00 AM",
+            "activity": "Private charter flight on Laucala's own aircraft to the island's private airstrip (~1 hour). No commercial transfers.",
+            "who": "All",
+            "icon": "🛩️"
+          },
+          {
+            "time": "9:00 AM",
+            "activity": "Arrive Laucala — personal welcome from island management, champagne, villa orientation",
+            "who": "All",
+            "icon": "🌺"
+          },
+          {
+            "time": "12:00 PM",
+            "activity": "Lunch at Plantation House — farm-to-table dining from the island's own organic farm",
+            "who": "All",
+            "icon": "🍽️"
+          },
+          {
+            "time": "3:00 PM",
+            "activity": "Explore the island — private beach, golf course, stables, coconut plantation",
+            "who": "All",
+            "icon": "🏖️"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "What a Typical Activity Day Would Include",
+        "schedule": [
+          {
+            "time": "Morning",
+            "activity": "Private submarine excursion — Laucala has its own DeepFlight submarine for underwater reef exploration without getting wet",
+            "who": "Adults (age restriction for sub)",
+            "icon": "🤿"
+          },
+          {
+            "time": "Morning",
+            "activity": "Horseback riding along the beach or through coconut groves — the island has its own stables",
+            "who": "Adults + 5yo (pony rides available)",
+            "icon": "🐴"
+          },
+          {
+            "time": "Afternoon",
+            "activity": "18-hole championship golf course designed by David McLay Kidd — one of the most stunning courses in the world",
+            "who": "Adults + Grandparents",
+            "icon": "⛳"
+          },
+          {
+            "time": "Afternoon",
+            "activity": "Visit the organic farm — 240 acres of produce, free-range chickens, and a hydroponic greenhouse",
+            "who": "All",
+            "icon": "🌱"
+          },
+          {
+            "time": "Evening",
+            "activity": "Private beach dinner with personal chef — any cuisine, any style, any location on the island",
+            "who": "All",
+            "icon": "🕯️"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "What Water Activities Would Include",
+        "schedule": [
+          {
+            "time": "Morning",
+            "activity": "World-class diving — Laucala's house reef is among Fiji's best. Private dive master.",
+            "who": "Adults",
+            "icon": "🤿"
+          },
+          {
+            "time": "Morning",
+            "activity": "Deep-sea fishing on Laucala's private sport fishing boat",
+            "who": "Adults + Grandpa + 5yo",
+            "icon": "🎣"
+          },
+          {
+            "time": "Afternoon",
+            "activity": "Jet skiing, waterskiing, wakeboarding — all equipment and instruction included",
+            "who": "Adults",
+            "icon": "🚤"
+          },
+          {
+            "time": "Evening",
+            "activity": "Hilltop dining at the overwater restaurant — 360-degree views of the Pacific",
+            "who": "All",
+            "icon": "🍷"
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "title": "Placeholder — See Other Fiji Options for 2026",
+        "schedule": [
+          {
+            "time": "N/A",
+            "activity": "For a June–July 2026 trip, consider Kokomo Private Island, Vomo Island, Nanuku Auberge, or Six Senses Fiji instead. All are open and bookable.",
+            "who": "N/A",
+            "icon": "💡"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "title": "Placeholder",
+        "schedule": [
+          {
+            "time": "N/A",
+            "activity": "Laucala reopens February 2027. If the family loves Fiji on this trip, Laucala would be an incredible return destination when the kids are a year older.",
+            "who": "N/A",
+            "icon": "📅"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "title": "Placeholder",
+        "schedule": [
+          {
+            "time": "N/A",
+            "activity": "Note: Laucala is less kid-focused than Kokomo, Vomo, or Nanuku. It caters more to ultra-high-end couples and families with older children. The toddler infrastructure (nannies, kids' clubs, baby-proofing) is not as developed as the other options.",
+            "who": "N/A",
+            "icon": "ℹ️"
+          }
+        ]
+      },
+      {
+        "day": 8,
+        "title": "Placeholder",
+        "schedule": [
+          {
+            "time": "N/A",
+            "activity": "Estimated cost when open: $150K–$200K for 8 nights with 7 family members. Laucala is priced at the absolute top of the market.",
+            "who": "N/A",
+            "icon": "💰"
+          }
+        ]
+      },
+      {
+        "day": 9,
+        "title": "Placeholder — Departure",
+        "schedule": [
+          {
+            "time": "N/A",
+            "activity": "Same return flight: Fiji Airways FJ810 NAN → LAX, business class, Jul 5 evening departure, arrive Jul 5 afternoon.",
+            "who": "All",
+            "icon": "✈️"
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Laucala Island is CLOSED for renovation through January 2027. Do not attempt to book for June–July 2026.",
+      "If you fall in love with Fiji on this trip, bookmark Laucala for a return visit in 2027 or 2028 when the kids are older.",
+      "Laucala is the most exclusive resort in Fiji but the LEAST kid-optimized of the five options here. No dedicated baby butlers or kids' village.",
+      "The private airstrip and charter flight eliminate the helicopter/seaplane/boat transfer issue entirely.",
+      "When open, Laucala is fully all-inclusive at the highest tier — Dom Perignon, private submarines, unlimited spa, horseback riding, golf.",
+      "Consider Laucala for an adults-only anniversary trip, or revisit when the youngest is 4+ and the 5yo is 8+."
+    ],
+    "costBreakdown": {
+      "flights": "$33,550 (6 business class seats + 1 lap infant, Fiji Airways LAX-NAN nonstop RT)",
+      "hotel": "$80,000–$128,000 (estimated, 2 Plantation Villas x 8 nights, post-renovation pricing)",
+      "activities": "Included (all-inclusive)",
+      "food": "Included (all-inclusive)",
+      "transfers": "$5,000 (private charter flight RT on Laucala's aircraft)",
+      "total": "$150K–$200K (when open)"
     }
   },
   {
